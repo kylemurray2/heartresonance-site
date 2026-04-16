@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Heart Resonance</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f0f14;
+      color: #cbd5e1;
+      padding: 40px 24px 80px;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    nav { margin-bottom: 40px; }
+    nav a { color: #64748b; text-decoration: none; font-size: 0.9rem; }
+    nav a:hover { color: #94a3b8; }
+    h1 { font-size: 2rem; font-weight: 700; color: #f8fafc; margin-bottom: 8px; }
+    .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 40px; }
+    h2 { font-size: 1.15rem; font-weight: 600; color: #f1f5f9; margin: 36px 0 12px; }
+    h3 { font-size: 1rem; font-weight: 600; color: #e2e8f0; margin: 24px 0 8px; }
+    p { line-height: 1.75; margin-bottom: 16px; }
+    ul { padding-left: 20px; margin-bottom: 16px; }
+    li { line-height: 1.75; margin-bottom: 6px; }
+    strong { color: #e2e8f0; }
+    hr { border: none; border-top: 1px solid #1e293b; margin: 32px 0; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 0.9rem; }
+    th { text-align: left; padding: 10px 12px; background: #1e293b; color: #94a3b8; font-weight: 600; }
+    td { padding: 10px 12px; border-bottom: 1px solid #1e293b; color: #cbd5e1; vertical-align: top; }
+    a { color: #60a5fa; }
+    .disclaimer {
+      background: #1e293b;
+      border-left: 3px solid #475569;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-top: 40px;
+    }
+    footer { margin-top: 60px; font-size: 0.8rem; color: #475569; }
+    footer a { color: #64748b; text-decoration: none; margin-right: 16px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav><a href="index.html">← Heart Resonance</a></nav>
+
+    <h1>Privacy Policy</h1>
+    <div class="meta">Last updated: April 16, 2026</div>
+
+    <p>Heart Resonance ("we", "us", "our") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights.</p>
+
+    <hr />
+
+    <h2>1. Who We Are</h2>
+    <p>Heart Resonance is an independent mobile application developed by Groma Apps. Contact: <a href="mailto:murray@gromalabs.com">murray@gromalabs.com</a></p>
+
+    <hr />
+
+    <h2>2. Information We Collect</h2>
+
+    <h3>Information that stays on your device (never transmitted)</h3>
+    <ul>
+      <li><strong>Heart-rate data:</strong> BPM readings and inter-beat intervals measured from your Bluetooth heart-rate monitor during sessions.</li>
+      <li><strong>Session history:</strong> Timestamps, duration, breathing pace, HRV metrics, and composite scores for each session.</li>
+      <li><strong>Resonance frequency profile:</strong> Your personalized breathing rate derived from the ASSESS protocol.</li>
+    </ul>
+    <p>None of this health data is uploaded to any server, shared with third parties, or associated with your identity.</p>
+
+    <h3>Information collected automatically</h3>
+    <ul>
+      <li><strong>Crash reports</strong> (via Firebase Crashlytics): If the app crashes, a report is sent to Google/Firebase containing device model, OS version, app version, and error stack trace. No heart-rate data or session content is included.</li>
+      <li><strong>Usage analytics</strong> (via Firebase Analytics): Anonymized event counts such as screen views, session start/end, and feature usage. No raw health data is included. Analytics collection is disabled in debug builds.</li>
+    </ul>
+
+    <h3>Information you voluntarily provide</h3>
+    <ul>
+      <li><strong>Feedback messages:</strong> If you submit feedback via the in-app form, your message, an optional name, feedback category, and device platform are stored in Firebase Firestore. This is the only user-submitted data stored on our servers.</li>
+    </ul>
+
+    <hr />
+
+    <h2>3. How We Use Information</h2>
+    <table>
+      <tr><th>Data</th><th>Purpose</th></tr>
+      <tr><td>Heart-rate data</td><td>Real-time HRV analysis and breathing guidance — on device only</td></tr>
+      <tr><td>Session history</td><td>Progress tracking displayed within the app — on device only</td></tr>
+      <tr><td>Crash reports</td><td>Diagnosing and fixing bugs</td></tr>
+      <tr><td>Usage analytics</td><td>Understanding which features are used to improve the app</td></tr>
+      <tr><td>Feedback messages</td><td>Responding to bug reports and feature requests</td></tr>
+    </table>
+    <p>We do not sell, rent, or share your data with advertisers or data brokers.</p>
+
+    <hr />
+
+    <h2>4. Third-Party Services</h2>
+    <table>
+      <tr><th>Service</th><th>Provider</th><th>Data shared</th><th>Purpose</th></tr>
+      <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>Crash logs, device info</td><td>Crash reporting</td></tr>
+      <tr><td>Firebase Analytics</td><td>Google LLC</td><td>Anonymized usage events</td><td>Product analytics</td></tr>
+      <tr><td>Firebase Firestore</td><td>Google LLC</td><td>Feedback messages</td><td>Feedback storage</td></tr>
+    </table>
+    <p>Google's privacy policy applies to Firebase services: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+
+    <hr />
+
+    <h2>5. Data Retention</h2>
+    <ul>
+      <li><strong>On-device data</strong> (sessions, profile): Retained until you reset history or uninstall the app. You control this data entirely.</li>
+      <li><strong>Crash reports:</strong> Retained by Firebase Crashlytics per Google's retention policy (90 days).</li>
+      <li><strong>Analytics events:</strong> Retained per Firebase Analytics standard retention (up to 14 months).</li>
+      <li><strong>Feedback messages:</strong> Retained in Firestore until manually deleted. Contact us to request deletion.</li>
+    </ul>
+
+    <hr />
+
+    <h2>6. Your Rights</h2>
+
+    <h3>All users</h3>
+    <ul>
+      <li><strong>Access:</strong> You can see all your session data within the app.</li>
+      <li><strong>Delete:</strong> Use "Reset History" in the Breath History screen to delete all session data. Uninstalling the app removes all local data.</li>
+      <li><strong>Feedback deletion:</strong> Email us at <a href="mailto:murray@gromalabs.com">murray@gromalabs.com</a> to request deletion of any feedback you submitted.</li>
+    </ul>
+
+    <h3>EU / EEA residents (GDPR)</h3>
+    <p>You have the right to access, rectify, erase, restrict processing, and portability of your personal data. To exercise these rights, contact us at <a href="mailto:murray@gromalabs.com">murray@gromalabs.com</a>.</p>
+
+    <h3>California residents (CCPA)</h3>
+    <p>You have the right to know what personal information is collected, to request deletion, and to opt out of sale (we do not sell data). Contact us at <a href="mailto:murray@gromalabs.com">murray@gromalabs.com</a>.</p>
+
+    <hr />
+
+    <h2>7. Children</h2>
+    <p>This app is not directed at children under 13. We do not knowingly collect data from children under 13. If you believe a child has provided us with personal data, contact us and we will delete it.</p>
+
+    <hr />
+
+    <h2>8. Data Security</h2>
+    <p>Heart-rate and session data never leave your device. Feedback submitted through the app is transmitted over HTTPS to Firebase Firestore. We rely on Google's security infrastructure for server-side data protection.</p>
+
+    <hr />
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this policy when the app adds new features or data practices change. Material changes will be communicated via an in-app notice. The "Last updated" date at the top of this page will always reflect the most recent revision.</p>
+
+    <hr />
+
+    <h2>10. Contact</h2>
+    <p>Questions about this privacy policy? Email us at: <a href="mailto:murray@gromalabs.com">murray@gromalabs.com</a></p>
+
+    <div class="disclaimer">
+      Heart Resonance is a wellness tool. It is not a medical device and does not diagnose, treat, or prevent any health condition.
+    </div>
+
+    <footer>
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms of Service</a>
+      &copy; 2026 Groma Apps
+    </footer>
+  </div>
+</body>
+</html>
