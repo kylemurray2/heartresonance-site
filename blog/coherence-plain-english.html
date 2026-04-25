@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://heartresonance.app/blog/coherence-plain-english.html" />
+  <title>Heart Coherence in Plain English — Heart Resonance</title>
+  <meta name="description" content="A plain-English guide to Shaffer 2020 — the six criteria that together quantify coherence, what each one measures, and why any single coherence score hides information." />
+  <meta property="og:title" content="Heart Coherence in Plain English" />
+  <meta property="og:description" content="Shaffer's six criteria, and why a single coherence score isn't enough." />
+  <meta property="og:type" content="article" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='78' font-size='80'%3E%E2%99%A5%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark">♥</span>
+      <span class="brand-name">Heart Resonance</span>
+    </a>
+    <nav class="site-nav">
+      <a href="/science.html">Science</a>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/pacer.html">Pacer</a>
+      <a href="/calculator.html">Calculator</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="prose">
+  <div class="kicker">Blog · Coherence</div>
+  <h1>Heart coherence in plain English</h1>
+  <p class="deck">
+    "Coherence" is one of those words that's used so much in wellness marketing that it's easy
+    to forget it started as a technical term with a precise definition. Here's what Shaffer and
+    Meehan's 2020 paper actually says — and why six numbers are better than one.
+  </p>
+  <div class="meta">Published April 2026 · 11 minute read</div>
+
+  <h2>The word problem</h2>
+
+  <p>
+    Open any wellness app that involves breathing and you will see the word "coherence." Usually
+    as a single score from 0 to 100, often in a soothing color, occasionally with a checkmark
+    when you hit a threshold. The implication is that this number measures your current
+    emotional and physiological state, and that higher is better.
+  </p>
+
+  <p>
+    That implication is mostly true. "Coherence" in the engineering sense really does describe a
+    specific, measurable property of a signal — specifically, how close the signal is to a pure
+    sine wave. When your heart-rate variability signal looks like a single clean oscillation
+    locked to your breath, your HRV trace is, literally, coherent. When it looks like noise with
+    a bunch of competing frequencies in it, it isn't.
+  </p>
+
+  <p>
+    The problem is that compressing "how coherent is this signal?" into one number requires
+    choosing one method of measuring sine-wave-ness over several reasonable alternatives. And
+    the method you pick determines what kinds of sessions will score well and what kinds will
+    score poorly. A session can look great on one coherence metric and mediocre on another, for
+    perfectly valid physiological reasons.
+  </p>
+
+  <p>
+    In 2020, Fred Shaffer and Zachary Meehan published a paper arguing that the field should
+    stop pretending that a single coherence number captures everything, and instead report six
+    related measurements that together describe the signal's structure. This is the methodology
+    Heart Resonance uses. Let's walk through each one.
+  </p>
+
+  <h2>Criterion 1: Peak frequency</h2>
+
+  <p>
+    <strong>What it asks:</strong> at what frequency does the HRV signal have the most power?
+  </p>
+
+  <p>
+    <strong>How it's measured:</strong> run a Fourier transform on the R-R interval time series
+    and find the single frequency with the largest power-spectrum value.
+  </p>
+
+  <p>
+    <strong>Why it matters:</strong> during resonance-frequency breathing, this peak should be
+    in the LF band (0.04 – 0.15 Hz) and should match the breathing rate you're pacing to. If
+    you're breathing at 5.5 BPM (= 0.092 Hz) and the peak shows up at 0.08 Hz, the signal is
+    there but offset — maybe you're drifting toward 5 BPM without realizing it. If the peak is
+    at 0.2 Hz (= 12 BPM), you're not at resonance at all; you're just recording normal respiratory
+    sinus arrhythmia.
+  </p>
+
+  <p>
+    <strong>Failure mode:</strong> a high-power peak in the wrong place. The amplitude looks
+    impressive but the rhythm isn't locked to your intended pace. Usually means the breathing
+    discipline slipped during the session.
+  </p>
+
+  <h2>Criterion 2: Peak power</h2>
+
+  <p>
+    <strong>What it asks:</strong> how much absolute power is at the peak frequency?
+  </p>
+
+  <p>
+    <strong>How it's measured:</strong> the power-spectrum value at the peak, in ms² / Hz.
+  </p>
+
+  <p>
+    <strong>Why it matters:</strong> this is the direct amplitude measurement. It tells you how
+    much HRV you're actually generating. Big peak = large heart-rate swings, strong RSA, lots of
+    vagal action. Small peak = small swings, weak RSA, not much happening.
+  </p>
+
+  <p>
+    <strong>Failure mode:</strong> peak is in the right place but small. Two common causes: low
+    baseline vagal tone (maybe you're stressed, sick, or dehydrated today), or you're breathing
+    shallowly. Coherence breathing requires both the right rate <em>and</em> enough tidal volume
+    to actually engage RSA.
+  </p>
+
+  <h2>Criterion 3: Peak height</h2>
+
+  <p>
+    <strong>What it asks:</strong> how tall is the peak relative to the background noise?
+  </p>
+
+  <p>
+    <strong>How it's measured:</strong> peak power divided by the power at some reference
+    point — typically the average spectrum power across a broader band.
+  </p>
+
+  <p>
+    <strong>Why it matters:</strong> this is different from criterion 2. A session can have
+    high peak power but also elevated broad-band noise (lots of random variability on top of
+    the resonance rhythm), which means the peak isn't clean. Peak height normalizes for this.
+    A high peak height means the signal is strongly organized, not just loud.
+  </p>
+
+  <p>
+    <strong>Failure mode:</strong> high peak power with low peak height. You're generating HRV,
+    but not coherently. Often means motion artifacts (you shifted position), ectopic beats
+    (an extra heartbeat thrown in), or distracted breathing (inconsistent pace).
+  </p>
+
+  <h2>Criterion 4: Peak dominance</h2>
+
+  <p>
+    <strong>What it asks:</strong> is the peak the only big thing in the spectrum, or is it
+    competing with other peaks?
+  </p>
+
+  <p>
+    <strong>How it's measured:</strong> the ratio of peak power to the power at the second-largest
+    peak, sometimes expressed as a dominance index.
+  </p>
+
+  <p>
+    <strong>Why it matters:</strong> a truly coherent signal is nearly a pure sine wave, which
+    means it has one dominant frequency and essentially nothing else. A session with one big
+    peak and several competing medium peaks is "peaky" but not coherent — there are multiple
+    rhythms fighting for dominance. This often happens when your breathing is inconsistent in a
+    structured way (e.g. pausing at the top of every third breath).
+  </p>
+
+  <p>
+    <strong>Failure mode:</strong> strong peak at the intended frequency, but another big peak
+    at its harmonic (often 2× the breathing frequency). Usually caused by uneven inhale/exhale
+    duration — if your inhale is much shorter than your exhale, the spectrum "smears" into a
+    series of harmonics.
+  </p>
+
+  <h2>Criterion 5: LF-to-total power ratio</h2>
+
+  <p>
+    <strong>What it asks:</strong> what fraction of the signal's energy is concentrated in the
+    resonance band?
+  </p>
+
+  <p>
+    <strong>How it's measured:</strong> sum of power in the LF band (0.04 – 0.15 Hz) divided by
+    total power across all frequencies.
+  </p>
+
+  <p>
+    <strong>Why it matters:</strong> during a good resonance session, most of your HRV power
+    should be in LF. If a large fraction is in HF (> 0.15 Hz), that means fast breathing-rate
+    variability is competing with the resonance rhythm — probably because you're drifting
+    between your target rate and faster spontaneous breathing. If a large fraction is in VLF
+    (< 0.04 Hz), slow drifts are dominating — maybe you haven't settled into the session yet.
+  </p>
+
+  <p>
+    <strong>Failure mode:</strong> peak is good but a lot of energy is elsewhere in the
+    spectrum. The session is mixing resonance with other oscillations. Often improves with
+    longer or more settled practice.
+  </p>
+
+  <h2>Criterion 6: Time-domain stability</h2>
+
+  <p>
+    <strong>What it asks:</strong> do RMSSD and SDNN stay high and consistent across the
+    session, or do they spike and collapse?
+  </p>
+
+  <p>
+    <strong>How it's measured:</strong> RMSSD and SDNN computed in rolling windows (e.g. every
+    two minutes), evaluated for both absolute level and variance across windows.
+  </p>
+
+  <p>
+    <strong>Why it matters:</strong> the frequency-domain criteria all operate on the full
+    session's spectrum, which is a summary that hides temporal structure. A session where you
+    had one great minute and eleven mediocre ones can still produce a respectable peak if that
+    minute was really impressive. Time-domain stability catches that — a good session should be
+    consistently elevated, not spiky.
+  </p>
+
+  <p>
+    <strong>Failure mode:</strong> excellent peak-frequency and peak-power scores but time
+    domain metrics are variable. Usually means the session was inconsistent — you zoned out for
+    minutes at a time and then tuned back in. Common, fixable.
+  </p>
+
+  <h2>Why six beats one</h2>
+
+  <p>
+    Each criterion answers a different question about the signal. "Was the rhythm at the right
+    rate?" (1). "Was it loud?" (2). "Was it clean?" (3). "Was it the only rhythm?" (4). "Was
+    it concentrated?" (5). "Was it stable?" (6).
+  </p>
+
+  <p>
+    A single coherence score can only summarize all of this by picking weights. Any weighting
+    choice implicitly decides which kinds of failures are penalized and which aren't. HeartMath's
+    score, for instance, is heavily weighted toward peak-to-total-power ratio and peak
+    height — so it penalizes messy signals strongly, but a session that scored high might have
+    drifted off the intended rate and still look good.
+  </p>
+
+  <p>
+    None of this makes single-score coherence bad or unusable. It makes it
+    <em>one perspective</em> on the signal. If you know what that perspective is optimizing for,
+    you can work with it. If you don't — as most users don't, because vendors generally don't
+    publish the formula — you're flying partially blind.
+  </p>
+
+  <h2>How Heart Resonance uses the six</h2>
+
+  <p>
+    The app shows a single composite coherence score on the main session view, because most
+    users want one number to watch during a session. That composite is a weighted mean of the
+    six criteria, tuned to prioritize peak-dominance and peak-height for real-time feedback.
+  </p>
+
+  <p>
+    At the end of every session, the stats screen breaks out each of the six criteria with its
+    own value, threshold, and pass/fail. This is where the information lives. If your composite
+    score was 62%, you can see specifically which criteria were pulling it down — maybe peak
+    height was great but peak dominance was low (harmonics from uneven breathing). That's
+    actionable. The composite alone isn't.
+  </p>
+
+  <p>
+    We also store all six in the CSV export, so if you do your own analysis across sessions
+    you can track each metric independently. If you're doing long-term training, RMSSD stability
+    and LF concentration are typically the first to rise. Peak height rises later, after your
+    breath-control becomes more consistent. Peak power takes longest — it's dominated by vagal
+    tone, which you build slowly.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">The one-line takeaway</span>
+    <p>"Coherence" is a real thing, measured on a real signal, using defensible math. It just
+    isn't a number. It's a six-dimensional description of how your heart and breath are
+    coordinating. Some coordinates will be strong, some weak. Knowing which is which is the
+    difference between "my app said 72%" and "I know what to work on."</p>
+  </div>
+
+  <h2>Further reading</h2>
+
+  <ul>
+    <li><a href="/research.html">Shaffer & Meehan 2020</a> is the paper — linked in the research bibliography with the rest of the key references</li>
+    <li><a href="/science.html">The science page</a> has the physiological background if you want to back up a level</li>
+    <li><a href="/how-it-works.html">The app walkthrough</a> shows how the six criteria appear in a session</li>
+    <li><a href="/glossary.html">The glossary</a> for anything unfamiliar</li>
+  </ul>
+
+  <p class="mt-xl">
+    <a href="/blog/personal-resonance-frequency.html" class="btn-secondary">← Previous: Why 6 BPM isn't universal</a>
+    <a href="/blog/" class="btn-secondary" style="margin-left: 8px;">All posts →</a>
+  </p>
+
+</article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-title">Learn</div>
+      <a href="/science.html">The Science</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/research.html">Research</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Tools</div>
+      <a href="/pacer.html">Breath Pacer</a>
+      <a href="/calculator.html">RF Calculator</a>
+      <a href="/compare.html">Compare Apps</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Heart Resonance</div>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/for-coaches.html">For Coaches</a>
+      <a href="mailto:support@heartresonance.app">Contact</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Legal</div>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Groma Apps · heartresonance.app
+  </div>
+</footer>
+
+</body>
+</html>

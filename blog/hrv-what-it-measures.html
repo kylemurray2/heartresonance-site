@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://heartresonance.app/blog/hrv-what-it-measures.html" />
+  <title>What HRV Actually Measures (And What Your Wearable Gets Wrong) — Heart Resonance</title>
+  <meta name="description" content="Consumer wearables surface a single HRV number. But HRV is a family of metrics measuring different things, and wrist-PPG sensors throw away most of the signal. A guide to what's real." />
+  <meta property="og:title" content="What HRV Actually Measures (And What Your Wearable Gets Wrong)" />
+  <meta property="og:description" content="The HRV number on your watch is a compressed, filtered, approximated version of a much richer signal." />
+  <meta property="og:type" content="article" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='78' font-size='80'%3E%E2%99%A5%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark">♥</span>
+      <span class="brand-name">Heart Resonance</span>
+    </a>
+    <nav class="site-nav">
+      <a href="/science.html">Science</a>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/pacer.html">Pacer</a>
+      <a href="/calculator.html">Calculator</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="prose">
+  <div class="kicker">Blog · HRV basics</div>
+  <h1>What HRV actually measures (and what your wearable gets wrong)</h1>
+  <p class="deck">
+    Consumer wearables surface a single HRV number and call it your "recovery" or "stress" score.
+    That number is a compressed, filtered, approximated version of a much richer signal — and for
+    a lot of applications, the approximation hides the thing you actually care about.
+  </p>
+  <div class="meta">Published April 2026 · 10 minute read</div>
+
+  <h2>Start with what's under the hood</h2>
+
+  <p>
+    HRV is not a number. HRV is a category.
+  </p>
+
+  <p>
+    When your heart beats, you can measure the interval between consecutive beats — the R-R
+    interval, so named for the R peaks on the ECG trace that mark each ventricular contraction.
+    A typical resting adult at 60 BPM does not produce 60 beats evenly spaced at 1.000 seconds.
+    Instead you get a sequence like: 987 ms, 1052 ms, 998 ms, 1021 ms, 1088 ms, 945 ms, 1012 ms...
+  </p>
+
+  <p>
+    That's your HRV. Not any single number — the <em>sequence of intervals</em>, and all the
+    statistical patterns you can extract from it. A five-minute recording at rest might contain
+    300 of these intervals. Analysts have spent the better part of fifty years inventing ways
+    to summarize them.
+  </p>
+
+  <p>
+    The resulting zoo of metrics breaks into three families.
+  </p>
+
+  <h3>Time-domain metrics</h3>
+
+  <p>
+    These treat the sequence of R-R intervals as a time series and compute descriptive statistics
+    on it directly.
+  </p>
+
+  <ul>
+    <li><strong>SDNN</strong>: standard deviation of the whole series. Captures total variability, including slow rhythms that take many seconds to play out. Sensitive to both branches of the autonomic nervous system.</li>
+    <li><strong>RMSSD</strong>: root-mean-square of the <em>differences between successive intervals</em>. Captures beat-to-beat variability, which is almost entirely vagal.</li>
+    <li><strong>pNN50</strong>: the percentage of successive intervals that differ by more than 50 ms. Another vagal indicator, highly correlated with RMSSD.</li>
+  </ul>
+
+  <p>
+    SDNN and RMSSD answer different questions. If a person's heart rate swings slowly from 60 to
+    75 BPM and back over a two-minute period but individual successive beats are nearly identical,
+    their SDNN will be high and their RMSSD will be low. That's a meaningful physiological
+    distinction. Compressing it to one number throws it away.
+  </p>
+
+  <h3>Frequency-domain metrics</h3>
+
+  <p>
+    These take the R-R sequence, interpolate it into a continuous signal, run a Fourier transform,
+    and report the power in various frequency bands.
+  </p>
+
+  <ul>
+    <li><strong>VLF (very-low-frequency, 0 – 0.04 Hz)</strong>: power in oscillations slower than 25 seconds. Mechanism poorly understood; correlated with thermoregulation, renin-angiotensin activity, and possibly mortality risk.</li>
+    <li><strong>LF (low-frequency, 0.04 – 0.15 Hz)</strong>: power in 6 – 25-second oscillations. Contains the baroreflex resonance frequency. Mixed sympathetic/parasympathetic.</li>
+    <li><strong>HF (high-frequency, 0.15 – 0.4 Hz)</strong>: power in 2.5 – 7-second oscillations. Contains respiratory sinus arrhythmia at normal breathing rates. Almost pure vagal.</li>
+  </ul>
+
+  <p>
+    Frequency-domain analysis is where resonance frequency work lives. When you breathe at 6 BPM,
+    your RSA oscillation has a period of 10 seconds, which puts its frequency at 0.1 Hz — smack in
+    the middle of the LF band. Coherence breathing is, in a sense, the deliberate project of
+    shoveling variability from HF into LF by slowing your breath.
+  </p>
+
+  <h3>Non-linear metrics</h3>
+
+  <p>
+    Newer metrics trying to capture patterns that linear statistics miss: entropy measures (SampEn,
+    ApEn), Poincaré-plot geometry (SD1, SD2), detrended fluctuation analysis (DFA α1, α2). These
+    are increasingly popular in sports science for their sensitivity to autonomic state during
+    exercise. For coherence breathing work they're less directly relevant; we'll leave them here.
+  </p>
+
+  <h2>What wearables actually give you</h2>
+
+  <p>
+    Now the hard part. Most consumer wearables report a single number called "HRV" on their
+    home screen. What is that number?
+  </p>
+
+  <p>
+    For most — Oura, Whoop, Apple Watch's HRV feature, Garmin's HRV Status, Fitbit's HRV — it
+    is RMSSD, computed over some overnight or morning window, often with the specific method
+    not clearly documented.
+  </p>
+
+  <p>
+    This is a reasonable choice. RMSSD is a decent single-number summary of vagal activity, it's
+    robust to small amounts of missing data, and it tracks interesting lifestyle factors (sleep
+    quality, training load, alcohol). It's also what most consumer HRV research literature uses.
+  </p>
+
+  <p>
+    But there are four problems with leaning on it as <em>the</em> HRV metric:
+  </p>
+
+  <h3>Problem 1: It can't see the frequency-domain picture</h3>
+
+  <p>
+    An all-RMSSD view of HRV is blind to the thing coherence breathing is trying to change.
+    During a coherence-breathing session, RSA power moves from HF to LF and the LF peak becomes
+    sharp and narrow-band. RMSSD picks up some of this but not cleanly. You can have an excellent
+    resonance-frequency session and see only a modest RMSSD bump afterward, because RMSSD weighs
+    all beat-to-beat changes equally whether they're organized into a tall sine wave or scattered
+    as noise.
+  </p>
+
+  <p>
+    If your practice is coherence-oriented, watching an RMSSD tracker for the benefit is like
+    watching the scale after a weights workout — it's the wrong instrument for that question.
+  </p>
+
+  <h3>Problem 2: The sensor isn't a real ECG</h3>
+
+  <p>
+    Most wrist-worn devices use photoplethysmography (PPG): shine a green LED at the skin,
+    measure how reflected light changes as blood pulses through the capillaries, and infer each
+    heartbeat from the pulse waveform. Under optimal conditions — you're still, warm, well-
+    hydrated, the device is snug against your wrist — PPG can be quite accurate for average
+    heart rate.
+  </p>
+
+  <p>
+    For beat-to-beat timing precision, which is what HRV analysis requires, it's soft. The peak
+    of a PPG pulse wave arrives at your wrist 200 ms or so after the corresponding R peak at the
+    heart, and that delay varies slightly with every beat depending on blood pressure, arterial
+    tone, limb position, and skin perfusion. So even when the sensor correctly detects a pulse,
+    it may report a timing that's 10 – 30 ms off from the true R-R interval.
+  </p>
+
+  <p>
+    Ten milliseconds sounds trivial. It isn't, for HRV. Normal resting RMSSD is 20 – 50 ms. A
+    random timing error of 10 ms on every beat is large relative to the signal you're trying to
+    measure. Nelson et al. (2020) found that consumer wrist devices can reproduce overnight RMSSD
+    trends acceptably but cannot replicate short-window HRV metrics at the accuracy required for
+    frequency-domain or biofeedback work.
+  </p>
+
+  <h3>Problem 3: The value is smoothed</h3>
+
+  <p>
+    Wearable manufacturers know their sensor data is noisy. Their response is to smooth heavily.
+    Your Whoop "HRV" is not today's RMSSD — it's a rolling average over several days, often
+    trimmed to exclude outliers, adjusted against your personal baseline. This makes the number
+    stable and trendable, at the cost of throwing away within-day resolution.
+  </p>
+
+  <p>
+    If you run a 20-minute coherence session at 3 pm, your Whoop HRV will not move in response.
+    It can't. The metric is constructed not to.
+  </p>
+
+  <h3>Problem 4: The interpretation is proprietary</h3>
+
+  <p>
+    Your Oura "recovery" score combines HRV with resting heart rate, body temperature, respiratory
+    rate, and sleep stages into a single 1 – 100 value using a proprietary algorithm. Whoop's is
+    similar. Garmin's "HRV Status" categorizes your overnight HRV as low / balanced / unbalanced
+    / high based on a seven-day baseline against an unspecified population norm.
+  </p>
+
+  <p>
+    Each of these is defensible in its own terms. None of them is HRV. They are "a
+    vendor-specific wellness score derived partly from HRV." Treating them as HRV, and then
+    trying to use them to evaluate an intervention like coherence breathing, is a common and
+    frustrating mistake.
+  </p>
+
+  <h2>What a chest strap actually gives you</h2>
+
+  <p>
+    A chest-strap heart-rate sensor — Polar H10 is the standard — is effectively a miniature
+    two-lead ECG. It detects the R peak directly from the electrical signal of the heart,
+    reports each R-R interval at millisecond precision over Bluetooth, and makes no attempt to
+    smooth or cook the data.
+  </p>
+
+  <p>
+    The validation literature on these devices is extensive. The Polar H10 in particular has
+    been benchmarked against clinical 12-lead ECG and found to reproduce HRV metrics with
+    errors typically under 2% across time-domain and frequency-domain measures. For research
+    purposes, it's generally accepted as a reference sensor.
+  </p>
+
+  <p>
+    The cost of this is that you have to wear a strap across your chest for the duration of the
+    recording. For overnight tracking this is uncomfortable enough that most people won't do it,
+    which is exactly why wrist sensors dominate the market. For a 20-minute coherence breathing
+    session, it's trivial.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">The practical framing</span>
+    <p>Chest strap for the session. Wearable for the lifestyle. They're measuring overlapping
+    but different things, with different accuracies, at different time scales. You can have both.</p>
+  </div>
+
+  <h2>What to actually do</h2>
+
+  <ol>
+    <li>
+      <strong>Keep tracking overnight HRV on your wearable</strong> if you already do it. It's a
+      reasonable lifestyle signal, sensitive to alcohol, poor sleep, illness, overtraining. Just
+      don't expect it to move cleanly in response to a meditation practice.
+    </li>
+    <li>
+      <strong>For coherence-breathing work, use a chest strap and an app that shows you the
+      frequency-domain signal.</strong> You need to see the LF peak rise and narrow as you lock
+      on to your resonance frequency. Without that feedback you're flying blind, which
+      defeats the point of doing a measurement-based practice.
+    </li>
+    <li>
+      <strong>Don't average the two together.</strong> The RMSSD on your wrist and the
+      in-session coherence on your chest strap answer different questions. Trying to reconcile
+      them into a single "HRV score" is what started this confusion in the first place.
+    </li>
+  </ol>
+
+  <h2>Further reading</h2>
+
+  <ul>
+    <li><a href="/science.html">The science of resonance frequency breathing</a> — the full background</li>
+    <li><a href="/blog/coherence-plain-english.html">Heart coherence in plain English</a> — what coherence actually measures</li>
+    <li><a href="/research.html">The research bibliography</a> — Nelson 2020, Shaffer 2017, Laborde 2017 all worth reading</li>
+    <li><a href="/glossary.html">The glossary</a> — if any term here was unfamiliar</li>
+  </ul>
+
+  <p class="mt-xl">
+    <a href="/blog/" class="btn-secondary">← All posts</a>
+    <a href="/blog/personal-resonance-frequency.html" class="btn-secondary" style="margin-left: 8px;">Next: Why 6 BPM isn't universal →</a>
+  </p>
+
+</article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-title">Learn</div>
+      <a href="/science.html">The Science</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/research.html">Research</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Tools</div>
+      <a href="/pacer.html">Breath Pacer</a>
+      <a href="/calculator.html">RF Calculator</a>
+      <a href="/compare.html">Compare Apps</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Heart Resonance</div>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/for-coaches.html">For Coaches</a>
+      <a href="mailto:support@heartresonance.app">Contact</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Legal</div>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Groma Apps · heartresonance.app
+  </div>
+</footer>
+
+</body>
+</html>

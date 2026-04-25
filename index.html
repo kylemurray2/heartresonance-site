@@ -1,115 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://heartresonance.app/" />
-  <title>Heart Resonance — Coherence Breathing Training</title>
-  <meta name="description"
-    content="Find your personal resonance frequency with guided coherence breathing and real-time HRV feedback." />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #0f0f14;
-      color: #e2e8f0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 24px;
-    }
-
-    .hero {
-      max-width: 560px;
-      text-align: center;
-    }
-
-    .icon {
-      font-size: 64px;
-      margin-bottom: 24px;
-      display: block;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 8px;
-      color: #f8fafc;
-    }
-
-    .subtitle {
-      font-size: 1.05rem;
-      color: #94a3b8;
-      margin-bottom: 32px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-    }
-
-    p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: #cbd5e1;
-      margin-bottom: 40px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 10px;
-      padding: 14px 24px;
-      font-size: 0.9rem;
-      color: #94a3b8;
-      margin-bottom: 48px;
-    }
-
-    footer {
-      margin-top: 48px;
-      font-size: 0.8rem;
-      color: #475569;
-    }
-
-    footer a {
-      color: #64748b;
-      text-decoration: none;
-      margin: 0 12px;
-    }
-
-    footer a:hover {
-      color: #94a3b8;
-    }
-  </style>
+  <title>Heart Resonance — Find Your Personal Resonance Frequency</title>
+  <meta name="description" content="The breathing pace that maximizes your HRV is specific to your body. Heart Resonance measures it with your heart-rate sensor and trains you at your personal frequency." />
+  <meta property="og:title" content="Heart Resonance — Find Your Personal Resonance Frequency" />
+  <meta property="og:description" content="Most breathing apps guess 6 breaths per minute. This one measures yours." />
+  <meta property="og:url" content="https://heartresonance.app/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='78' font-size='80'%3E%E2%99%A5%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/assets/styles.css" />
 </head>
-
 <body>
-  <div class="hero">
-    <span class="icon">🫀</span>
-    <h1>Heart Resonance</h1>
-    <div class="subtitle">Coherence Breathing Training</div>
-    <p>
-      Find your personal resonance frequency — the breathing pace that maximizes
-      your heart-rate variability. Guided sessions, real-time HRV feedback, and
-      a personalized protocol that fits your physiology.
-    </p>
-    <div class="badge">Available on Google Play — Coming Soon</div>
-  </div>
-  <footer>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
-    <a href="mailto:support@heartresonance.app">Contact</a>
-    <br /><br />
-    &copy; 2026 Groma Apps
-  </footer>
-</body>
 
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark">♥</span>
+      <span class="brand-name">Heart Resonance</span>
+    </a>
+    <nav class="site-nav">
+      <a href="/science.html">Science</a>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/pacer.html">Pacer</a>
+      <a href="/calculator.html">Calculator</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Coherence Breathing · Personalized</div>
+    <h1>Every heart has a resonance frequency.<br />Most breathing apps don't know yours.</h1>
+    <p class="lede">
+      There is one breathing pace — specific to your body — at which your heart-rate variability
+      amplifies into a clean, single-peak oscillation. Heart Resonance measures it with your
+      chest-strap or arm sensor and trains you there. No guessing. No generic "6 breaths per minute."
+    </p>
+    <div class="hero-cta">
+      <a href="/science.html" class="btn-primary">Read the Science</a>
+      <a href="/pacer.html" class="btn-secondary">Try the Free Pacer</a>
+    </div>
+    <p class="text-muted" style="margin-top: 28px; font-size: 0.88rem;">
+      Android app available on Google Play · iOS coming soon
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="section-wide">
+    <div class="section-title">
+      <h2>What makes it different</h2>
+      <p>Heart Resonance exposes the full methodology that most wellness apps hide behind a single "stress score."</p>
+    </div>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="icon">♡</div>
+        <h3>Real sensor data</h3>
+        <p>Connects to standard Bluetooth heart-rate sensors — Polar, Garmin HRM, Wahoo. Raw R-R intervals, not wrist-PPG guesswork.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⤭</div>
+        <h3>Adaptive pacer</h3>
+        <p>An ASSESS → REFINE → HOLD protocol tests candidate breathing rates against your live heart-rate signal and converges on yours.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">◉</div>
+        <h3>Shaffer six-criteria coherence</h3>
+        <p>Peak power, single-peak dominance, LF/HF concentration, peak height, SDNN, and RMSSD — all of it, visible, every session.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⊡</div>
+        <h3>Full session export</h3>
+        <p>Every R-R interval, every breathing cue, every score. CSV export for your own analysis. Your data stays on your device.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⧗</div>
+        <h3>No subscription</h3>
+        <p>One-time unlock. Lifetime of sessions. We think recurring billing for breath training is absurd.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚙</div>
+        <h3>Built for clinicians too</h3>
+        <p>Methodology transparent enough for HRV biofeedback practitioners to use with clients. Read the <a href="/for-coaches.html">coach page →</a></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-narrow">
+    <div class="section-title">
+      <h2>The three things to know</h2>
+    </div>
+
+    <div class="feature-list">
+
+      <div class="feature-row">
+        <div class="feature-label">01 · Physiology</div>
+        <div class="feature-body">
+          <h3>Your heart rate naturally oscillates with your breath</h3>
+          <p>Inhale, it speeds up. Exhale, it slows. This is called respiratory sinus arrhythmia (RSA) and
+          it's a direct readout of vagus-nerve activity. A bigger RSA oscillation means better autonomic
+          flexibility. <a href="/science.html#rsa">More on RSA →</a></p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-label">02 · Resonance</div>
+        <div class="feature-body">
+          <h3>One breathing pace makes that oscillation enormous</h3>
+          <p>Your cardiovascular system has a resonant frequency — set by the baroreflex loop between your
+          heart and your arteries. Breathe at that pace and the RSA oscillation amplifies dramatically.
+          For most adults it falls between 4.5 and 6.5 breaths per minute. But the exact number is
+          personal. <a href="/blog/personal-resonance-frequency.html">Why there is no universal "6 BPM" →</a></p>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div class="feature-label">03 · Training</div>
+        <div class="feature-body">
+          <h3>Ten weeks at your frequency changes baseline HRV</h3>
+          <p>This is not just relaxation. Resonance frequency breathing, practiced 20 minutes a day for
+          eight to ten weeks, has repeatedly produced measurable improvements in baseline HRV, baroreflex
+          gain, and vagal tone — with follow-on effects on blood pressure, PTSD, asthma, and depression
+          symptoms. <a href="/research.html">See the research →</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="section-narrow">
+    <div class="section-title">
+      <h2>Free tools</h2>
+      <p>Explore the concept before you install anything.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <a href="/pacer.html" class="card-link">
+        <div class="card">
+          <div class="icon">◯</div>
+          <h3>Web breath pacer</h3>
+          <p>Adjustable 3 – 10 BPM pacer in your browser. Handy if you just want to practice. No sensor needed.</p>
+        </div>
+      </a>
+
+      <a href="/calculator.html" class="card-link">
+        <div class="card">
+          <div class="icon">≈</div>
+          <h3>Resonance frequency estimator</h3>
+          <p>Starting-point estimate of your personal frequency based on age and height. The app measures it for real.</p>
+        </div>
+      </a>
+
+      <a href="/glossary.html" class="card-link">
+        <div class="card">
+          <div class="icon">⟵</div>
+          <h3>HRV glossary</h3>
+          <p>RMSSD, SDNN, LF/HF, coherence, baroreflex, vagal tone — plain-English definitions for everything.</p>
+        </div>
+      </a>
+
+      <a href="/compare.html" class="card-link">
+        <div class="card">
+          <div class="icon">⇌</div>
+          <h3>App comparison</h3>
+          <p>How Heart Resonance stacks up against HeartMath, Elite HRV, Welltory and the rest. Honest take.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-narrow">
+    <div class="section-title">
+      <h2>From the blog</h2>
+      <p>Long-form writing on HRV, breathing, and measurement.</p>
+    </div>
+
+    <ul class="post-list">
+
+      <li class="post-item">
+        <div class="post-date">Coming soon</div>
+        <div>
+          <h3 class="post-title"><a href="/blog/hrv-what-it-measures.html">What HRV actually measures (and what your wearable gets wrong)</a></h3>
+          <p class="post-excerpt">Wrist-based PPG, morning readiness scores, "stress" values — there's a gap between what consumer
+          wearables report and what the heart-rate signal actually contains.</p>
+          <div class="post-tags">
+            <span class="pill pill-accent">HRV basics</span>
+            <span class="pill">Wearables</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="post-item">
+        <div class="post-date">Coming soon</div>
+        <div>
+          <h3 class="post-title"><a href="/blog/personal-resonance-frequency.html">Why there's no universal "6 breaths per minute"</a></h3>
+          <p class="post-excerpt">The Vaschillo protocol, baroreflex loop mechanics, and why the one pace that works for you may not
+          work at all for the person next to you.</p>
+          <div class="post-tags">
+            <span class="pill pill-accent">Resonance frequency</span>
+            <span class="pill">Methodology</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="post-item">
+        <div class="post-date">Coming soon</div>
+        <div>
+          <h3 class="post-title"><a href="/blog/coherence-plain-english.html">Heart coherence in plain English</a></h3>
+          <p class="post-excerpt">A guided tour of Shaffer 2020 — the six criteria that quantify coherence, what each one means, and why
+          any single-number "coherence score" is a simplification.</p>
+          <div class="post-tags">
+            <span class="pill pill-accent">Coherence</span>
+            <span class="pill">Shaffer 2020</span>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+    <div class="text-center mt-lg">
+      <a href="/blog/" class="btn-secondary">All posts →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="section-prose text-center">
+    <h2>Ready to find yours?</h2>
+    <p style="font-size: 1.1rem; color: var(--muted); max-width: 520px; margin: 0 auto 30px;">
+      Pair a heart-rate sensor, run the 12-minute assessment, and get your personal resonance
+      frequency — then practice there.
+    </p>
+    <div class="hero-cta">
+      <a href="#" class="btn-primary">Get on Google Play</a>
+      <a href="/how-it-works.html" class="btn-secondary">See how it works</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-title">Learn</div>
+      <a href="/science.html">The Science</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/research.html">Research</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Tools</div>
+      <a href="/pacer.html">Breath Pacer</a>
+      <a href="/calculator.html">RF Calculator</a>
+      <a href="/compare.html">Compare Apps</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Heart Resonance</div>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/for-coaches.html">For Coaches</a>
+      <a href="mailto:support@heartresonance.app">Contact</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Legal</div>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Groma Apps · heartresonance.app
+  </div>
+</footer>
+
+</body>
 </html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://heartresonance.app/how-it-works.html" />
+  <title>How Heart Resonance Works — Adaptive Pacer, Coherence Scoring, Session Analysis</title>
+  <meta name="description" content="A walkthrough of the Heart Resonance app: sensor pairing, the adaptive ASSESS-REFINE-HOLD pacer, Shaffer six-criteria coherence scoring, and session export." />
+  <meta property="og:title" content="How Heart Resonance Works" />
+  <meta property="og:description" content="Adaptive pacer, Shaffer six-criteria scoring, full session export." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='78' font-size='80'%3E%E2%99%A5%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark">♥</span>
+      <span class="brand-name">Heart Resonance</span>
+    </a>
+    <nav class="site-nav">
+      <a href="/science.html">Science</a>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/pacer.html">Pacer</a>
+      <a href="/calculator.html">Calculator</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<article class="prose">
+  <div class="kicker">How It Works</div>
+  <h1>From raw heartbeats to your resonance frequency in twelve minutes</h1>
+  <p class="deck">
+    The app has three jobs: read a clean heart-rate signal, find the breathing pace that
+    maximizes your HRV, and then help you practice there. Here's how each one works.
+  </p>
+
+  <h2 id="sensor">1. Sensor pairing</h2>
+
+  <p>
+    Heart Resonance needs beat-level heart-rate data — not a smoothed average, not a thirty-second
+    "RHR" — so it only talks to sensors that expose the Bluetooth Heart Rate Service with R-R
+    intervals. That's basically every chest strap on the market plus the best arm straps. Known-good
+    models:
+  </p>
+
+  <ul>
+    <li>Polar H9, H10 (gold standard for research)</li>
+    <li>Garmin HRM-Dual, HRM-Pro+, HRM-Fit</li>
+    <li>Wahoo TICKR, TICKR X</li>
+    <li>Polar Verity Sense (optical arm strap)</li>
+    <li>Coospo H6, H808s (budget options that work)</li>
+  </ul>
+
+  <p>
+    Open the app, tap <em>Start Session</em>, and it scans for nearby sensors. Pair once; the
+    app remembers and auto-reconnects on future sessions.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Why not wrist PPG?</span>
+    <p>Optical wrist sensors (Apple Watch, Fitbit, most Garmin watches) are fine for average
+    heart rate but their R-R timing is not accurate enough for HRV analysis at the resolution
+    resonance-frequency work needs. The beat-to-beat noise floor is simply too high. A $40
+    chest strap gives you cleaner data than a $400 watch for this specific task.</p>
+  </div>
+
+  <h2 id="assessment">2. The adaptive assessment (ASSESS → REFINE → HOLD)</h2>
+
+  <p>
+    The core feature. When you run your first session with the adaptive pacer enabled, the app runs
+    a 12-minute protocol that measures your resonance frequency directly from your HRV response.
+  </p>
+
+  <h3>Phase 1 — ASSESS (about 8 minutes)</h3>
+  <p>
+    The pacer cycles through five candidate breathing rates, typically spanning 4.5 to 6.5 BPM,
+    holding each for around 90 seconds. During each candidate, it computes:
+  </p>
+  <ul>
+    <li>The peak power in the HRV spectrum at the breathing frequency</li>
+    <li>The peak-to-noise ratio (dominance)</li>
+    <li>The LF-band power concentration</li>
+  </ul>
+  <p>
+    A steady-state buffer at the start of each candidate is discarded so we're scoring only after
+    your RSA has locked on to the new pace. You'll see the candidate number (1 of 5, 2 of 5, ...)
+    count up on the pacer card as the protocol progresses.
+  </p>
+
+  <h3>Phase 2 — REFINE (about 2 minutes)</h3>
+  <p>
+    Once all five candidates have been tested, the app picks the two or three best-scoring
+    candidates and runs a second, finer-grained pass — in 0.25 BPM steps — around the winning
+    region. This catches cases where your true resonance sits between two of the original
+    candidates.
+  </p>
+
+  <h3>Phase 3 — HOLD (remainder of session + all future sessions)</h3>
+  <p>
+    The pacer locks to the winning rate. You breathe there for the rest of the session, and on
+    every subsequent session by default. A one-line snackbar confirms:
+    <em>"Your optimal breathing pace was found."</em>
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Re-measuring</span>
+    <p>Your resonance frequency is stable over months but can drift with significant changes in
+    cardiovascular fitness, body weight, or autonomic health. The app lets you re-run ASSESS any
+    time from the setup screen.</p>
+  </div>
+
+  <h2 id="pacer">3. The pacer itself</h2>
+
+  <p>
+    Visual: an expanding/contracting peach orb, inhaling smoothly as it grows, exhaling as it
+    shrinks. The animation uses a sine-shaped curve, not a triangle wave, so the rate change at
+    the turnaround points is gradual rather than abrupt. Your diaphragm prefers it this way.
+  </p>
+
+  <p>
+    Audio: optional chime or tonal cues on the inhale and exhale transitions. Ten sound packs
+    ship with the app — Harp, Clarinet, Flute, Meditation, Ping, Pizzicato, Vox, Wurlitzer, Strings,
+    Guitar. Default is Vox. All can be muted.
+  </p>
+
+  <p>
+    Haptic: light haptic pulse on phase transitions (Pro feature).
+  </p>
+
+  <p>
+    Zen mode: one tap on the spa icon collapses the UI down to the breath ball over the zen
+    background, hides everything else. Useful when you just want to breathe and don't need to
+    see charts.
+  </p>
+
+  <h2 id="scoring">4. Live coherence and resonance scoring</h2>
+
+  <p>
+    As you breathe, two score bars update in real time:
+  </p>
+
+  <h3>Coherence</h3>
+  <p>
+    A 0 – 100% composite of the Shaffer six criteria, weighted for breath-to-breath responsiveness.
+    This is the number most users watch during a session. It climbs into the green zone (≥ 70%)
+    when you're well-locked to resonance.
+  </p>
+
+  <h3>Resonance</h3>
+  <p>
+    A separate score that measures how closely the HRV peak frequency matches your identified
+    resonance frequency. Coherence can be high while resonance is low (you're coherent but at the
+    wrong pace — common if you speed up unconsciously during a session). Resonance can only be
+    high if you're genuinely on your frequency.
+  </p>
+
+  <p>
+    We keep them separate because they answer different questions. Coherence answers "is your
+    heart rhythm in a nice clean sine wave?" Resonance answers "is that sine wave at the specific
+    frequency where your physiology wants it?"
+  </p>
+
+  <h2 id="live-hr">5. The heart-rate chart</h2>
+
+  <p>
+    Below the pacer, the full heart-rate trace updates as data arrives: the red curve is your
+    filtered BPM, the faint gray underneath is the raw per-beat signal. The chart auto-scales
+    to your heart-rate range and shows minute-markers at 0:30, 1:00, 1:30, etc.
+  </p>
+
+  <p>
+    This isn't decoration. When your breathing is matched to resonance, the BPM trace becomes a
+    smooth, regular oscillation tracking the pacer's inhale/exhale cycle. You can visually
+    confirm lock-on by watching the peaks of the BPM curve align with the peaks of your breaths.
+  </p>
+
+  <h2 id="analysis">6. Session analysis</h2>
+
+  <p>
+    When you end a session, the app runs a full post-hoc analysis and displays:
+  </p>
+
+  <ul>
+    <li>Complete HRV spectrum plot (0 – 0.5 Hz) with peak frequency highlighted</li>
+    <li>All six Shaffer criteria, each with its value, threshold, and pass/fail</li>
+    <li>RMSSD and SDNN, both overall and in 2-minute windows</li>
+    <li>Average BPM, BPM range, total beats</li>
+    <li>Coherence and resonance score history across the session</li>
+    <li>If you used the adaptive pacer: the scored curve for each candidate rate</li>
+  </ul>
+
+  <p>
+    Sessions are listed on the History screen. Tap any past session to re-open the full analysis.
+  </p>
+
+  <h2 id="export">7. Export</h2>
+
+  <p>
+    Every session can be exported as a zip containing:
+  </p>
+
+  <ul>
+    <li><code>rr_intervals.csv</code> — every R-R interval, millisecond precision</li>
+    <li><code>pacer_cues.csv</code> — every inhale / exhale transition timestamp</li>
+    <li><code>hrv_spectrum.csv</code> — computed frequency-domain output</li>
+    <li><code>session_meta.json</code> — configuration, timestamps, scores</li>
+  </ul>
+
+  <p>
+    The format is stable and documented. If you want to do your own analysis in Python or R,
+    or feed the data to a coaching dashboard, it's a straightforward read.
+  </p>
+
+  <h2 id="streaks">8. Consistency tools</h2>
+
+  <p>
+    Two features aimed at keeping a daily practice going:
+  </p>
+
+  <ul>
+    <li><strong>Streak counter</strong> — tracks consecutive days with at least one completed session. Shown on the home screen.</li>
+    <li><strong>Weekly coherence report</strong> — Sunday evening notification summarizing the week's sessions and average scores. Inexact scheduling so it doesn't require the "exact alarms" permission on Android 12+.</li>
+    <li><strong>Custom reminders</strong> — schedule breathing reminders at any time of day, any days of the week. Scheduled via local OS notifications; no network required.</li>
+  </ul>
+
+  <h2 id="privacy">9. Privacy</h2>
+
+  <p>
+    Every byte of your session data stays on your device unless you explicitly export it. There
+    is no cloud sync, no account, no server collecting your heartbeats. Analytics are anonymous
+    crash and usage counts only. Read the full <a href="/privacy.html">privacy policy</a> for
+    specifics.
+  </p>
+
+  <h2 id="pro">10. Pro unlock</h2>
+
+  <p>
+    The free tier gives you unlimited sessions with a fixed-rate pacer at whatever rate you
+    choose. Pro ($9.99, one-time) unlocks:
+  </p>
+
+  <ul>
+    <li>Adaptive assessment (ASSESS / REFINE / HOLD)</li>
+    <li>Full session statistics screen with six-criteria breakdown</li>
+    <li>CSV export</li>
+    <li>Haptic breath cues</li>
+    <li>All sound packs beyond the default</li>
+  </ul>
+
+  <p>
+    One payment. No subscription. We believe breath training shouldn't have recurring billing.
+  </p>
+
+  <div class="text-center mt-xl">
+    <a href="#" class="btn-primary">Get on Google Play</a>
+    <a href="/science.html" class="btn-secondary" style="margin-left: 8px;">Read the science</a>
+  </div>
+
+</article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-title">Learn</div>
+      <a href="/science.html">The Science</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/research.html">Research</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Tools</div>
+      <a href="/pacer.html">Breath Pacer</a>
+      <a href="/calculator.html">RF Calculator</a>
+      <a href="/compare.html">Compare Apps</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Heart Resonance</div>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/for-coaches.html">For Coaches</a>
+      <a href="mailto:support@heartresonance.app">Contact</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Legal</div>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Groma Apps · heartresonance.app
+  </div>
+</footer>
+
+</body>
+</html>
