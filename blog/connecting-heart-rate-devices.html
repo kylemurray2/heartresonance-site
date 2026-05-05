@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://heartresonance.app/blog/connecting-heart-rate-devices.html" />
+  <title>How to Connect Your Heart Rate Monitor to Heart Resonance — Heart Resonance</title>
+  <meta name="description" content="A practical guide to connecting chest straps, GPS watches, and Apple Watch to Heart Resonance. Find your device type and learn exactly what you need to broadcast heart rate over Bluetooth." />
+  <meta property="og:title" content="How to Connect Your Heart Rate Monitor to Heart Resonance" />
+  <meta property="og:description" content="Chest straps, GPS watches, Apple Watch, and everything else — what works, what needs setup, and what to do when BLE broadcasting isn't built in." />
+  <meta property="og:type" content="article" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='78' font-size='80'%3E%E2%99%A5%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark">♥</span>
+      <span class="brand-name">Heart Resonance</span>
+    </a>
+    <nav class="site-nav">
+      <a href="/science.html">Science</a>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/pacer.html">Pacer</a>
+      <a href="/calculator.html">Calculator</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="page-hero">
+  <img src="/assets/zen_meditation_06.png" class="hero-bg" alt="" />
+  <div class="hero-inner">
+    <span class="kicker">Blog · Setup</span>
+    <h1>How to connect your heart rate monitor</h1>
+  </div>
+</div>
+
+<article class="prose">
+  <p class="deck">
+    Heart Resonance reads heart rate over Bluetooth Low Energy (BLE). Most dedicated chest straps
+    do this natively. GPS watches usually can, with a setting change. Apple Watch cannot — but
+    a free third-party app fixes that. Here's what you need to know for your device.
+  </p>
+  <div class="meta">Published May 2026 · 8 minute read</div>
+
+  <h2>How it works</h2>
+
+  <p>
+    The app connects to any device that broadcasts the standard Bluetooth Heart Rate Profile (HRP).
+    This is an open standard — the same protocol a gym treadmill uses to pick up your chest strap.
+    When a device advertises itself over BLE using this profile, Heart Resonance can see it and
+    connect.
+  </p>
+
+  <p>
+    The important distinction is between <em>wearing</em> a heart rate sensor and <em>broadcasting</em>
+    it. Almost every fitness device measures your heart rate. Far fewer broadcast it continuously
+    as a BLE peripheral. That broadcast step is what the app needs.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Which metric you get depends on your device</span>
+    <p>Dedicated chest straps send individual beat-to-beat RR intervals — the gold standard for HRV
+    and resonance scoring. GPS watches and optical sensors typically send only BPM (a rolling
+    average), which the app still uses for all coherence analysis and resonance frequency detection.
+    Both work. Chest straps just give you richer data.</p>
+  </div>
+
+  <h2>Category 1: Dedicated chest straps — just pair it</h2>
+
+  <p>
+    If you own a dedicated chest strap from any of the major brands, it almost certainly broadcasts
+    BLE HRM natively. Wet the electrodes, strap it on, open Heart Resonance, and tap the Bluetooth
+    button. The device will appear in the scan list within a few seconds.
+  </p>
+
+  <p>Devices in this category include:</p>
+
+  <ul>
+    <li><strong>Polar H10, H9</strong> — the gold standard for RR interval accuracy. Pairs instantly.</li>
+    <li><strong>Garmin HRM-Dual, HRM-Pro, HRM-Pro Plus</strong> — dual ANT+/BLE; the BLE side pairs with the app.</li>
+    <li><strong>Wahoo TICKR, TICKR X, TICKR Fit</strong> — all broadcast BLE HRM natively.</li>
+    <li><strong>Scosche Rhythm+ 24, Rhythm Wave</strong> — optical arm bands that broadcast BLE.</li>
+    <li><strong>CooSpo, Magene, Powr Labs</strong> and most generic BLE chest straps.</li>
+  </ul>
+
+  <p>
+    You do not need to do anything in the device's own app first. The strap broadcasts
+    automatically when powered on and worn.
+  </p>
+
+  <h2>Category 2: Garmin GPS watches — enable BLE broadcast in settings</h2>
+
+  <p>
+    Most Garmin GPS watches (Fenix, Forerunner, Vivoactive, Venu, Epix series) can broadcast their
+    wrist heart rate over BLE. This feature is off by default because it drains battery faster and
+    the watch's primary BLE link is usually to your phone.
+  </p>
+
+  <p>To enable it:</p>
+
+  <ol>
+    <li>On the watch, go to <strong>Settings → Heart Rate → Broadcast Heart Rate</strong>.</li>
+    <li>Toggle it on. The watch will now advertise as a BLE HRM device.</li>
+    <li>Open Heart Resonance and scan for devices. Your watch will appear.</li>
+  </ol>
+
+  <p>
+    On some Garmin models the setting is called <strong>Broadcast Heart Rate</strong> and appears
+    as a widget or a menu item within an activity rather than in the main settings. If you can't
+    find it, check the watch's manual or search "broadcast heart rate" in Garmin Connect IQ — there
+    are also free data fields that enable this.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">Garmin watch vs. chest strap</span>
+    <p>The Garmin wrist optical sensor sends BPM only — no RR intervals. The app works perfectly,
+    but for the richest HRV data, pair a Garmin HRM-Pro chest strap alongside the watch (or instead
+    of it). The HRM-Pro broadcasts BLE independently of the watch.</p>
+  </div>
+
+  <h2>Category 3: Polar GPS watches — built-in BLE broadcast</h2>
+
+  <p>
+    Polar Vantage V2, Vantage M2, Grit X Pro, Ignite 3, Pacer Pro, and most other recent Polar
+    watches support BLE heart rate broadcasting natively.
+  </p>
+
+  <ol>
+    <li>On the watch, go to <strong>Settings → Heart Rate → Broadcast HR</strong>.</li>
+    <li>Enable it. The watch begins broadcasting immediately.</li>
+    <li>Scan in Heart Resonance. The watch appears as a BLE HRM.</li>
+  </ol>
+
+  <p>
+    Older Polar watches (M430, A370) may not have this feature. Check your model's specifications
+    at polar.com.
+  </p>
+
+  <h2>Category 4: Suunto and Coros GPS watches</h2>
+
+  <p>
+    Several Suunto models — including the Race, Vertical, 9 Peak Pro, and Suunto 5 Peak — support
+    BLE heart rate broadcast. Look for <strong>HR Broadcast</strong> or <strong>BLE Broadcast</strong>
+    in the watch's sensor or connectivity settings.
+  </p>
+
+  <p>
+    Coros watches (Pace 3, Apex 2 Pro, Vertix 2S) also support BLE HR broadcast, typically found
+    under <strong>Settings → Sensors → HR Broadcast</strong>.
+  </p>
+
+  <h2>Category 5: Apple Watch — needs a third-party app</h2>
+
+  <p>
+    Apple Watch does not natively broadcast heart rate as a BLE HRM peripheral. Apple's design
+    keeps Bluetooth tightly controlled — the watch advertises only to iPhones running Apple-approved
+    protocols, not to arbitrary BLE centrals like Heart Resonance.
+  </p>
+
+  <p>
+    The workaround is a watch app that reads the heart rate sensor and re-broadcasts it as a
+    standard BLE HRM. Several exist on the App Store:
+  </p>
+
+  <h3>Recommended: Wristly Heart Rate Monitor</h3>
+
+  <p>
+    <strong>Wristly</strong> is the most widely used solution for this purpose. Install the app on
+    your Apple Watch, launch it, and it immediately starts broadcasting your heart rate as a BLE
+    HRM peripheral. Heart Resonance will see it in the device scan.
+  </p>
+
+  <ol>
+    <li>Search "Wristly Heart Rate Monitor" in the App Store and install it (free).</li>
+    <li>Open Wristly on your Apple Watch.</li>
+    <li>Leave Wristly running in the foreground during your session — watchOS may throttle
+        background sensor access.</li>
+    <li>Open Heart Resonance on your iPhone and scan. "Wristly" or "Apple Watch" will appear.</li>
+  </ol>
+
+  <h3>Alternative: WorkOutDoors</h3>
+
+  <p>
+    <strong>WorkOutDoors</strong> is a full-featured workout app for Apple Watch that can broadcast
+    heart rate over BLE as a side effect of recording an activity. If you already use it for
+    outdoor activities, start a workout in WorkOutDoors and then connect Heart Resonance to it.
+    The broadcast is active while the workout runs.
+  </p>
+
+  <h3>A note on accuracy</h3>
+
+  <p>
+    Apple Watch uses a wrist-based optical sensor, which gives you BPM readings — not individual
+    beat-to-beat RR intervals. The app works with this and can still run the full resonance
+    frequency assessment and coherence scoring. If you want the richest possible data (individual
+    RR intervals for HRV), pair a chest strap instead. Many users with Apple Watches keep a Polar
+    H10 or Garmin HRM-Pro specifically for coherence sessions.
+  </p>
+
+  <h2>Category 6: Samsung Galaxy Watch and Wear OS</h2>
+
+  <p>
+    Some Samsung Galaxy Watch models and Wear OS watches support BLE heart rate broadcast through
+    their native settings or through apps. The availability and path vary significantly by model
+    and software version.
+  </p>
+
+  <ul>
+    <li><strong>Samsung Galaxy Watch 6, 7, Ultra</strong> — check Settings → Health → Measurement
+        for a BLE broadcast option. Alternatively, search the Galaxy Store for "HRM broadcast" apps.</li>
+    <li><strong>Wear OS (Google Pixel Watch, Mobvoi TicWatch)</strong> — third-party apps like
+        <strong>HRM for Wear</strong> from the Play Store can broadcast BLE heart rate.</li>
+  </ul>
+
+  <p>
+    If your Galaxy Watch or Wear OS device doesn't have a native broadcast option, search your
+    device's app store for "BLE heart rate broadcast" — several utility apps fill this gap.
+  </p>
+
+  <h2>Category 7: ANT+-only devices — you need a bridge or an upgrade</h2>
+
+  <p>
+    Older heart rate monitors — certain legacy Garmin HRM straps, early Wahoo sensors, some older
+    Polar straps — broadcast only over ANT+. ANT+ is not the same as Bluetooth Low Energy, and
+    smartphones do not have ANT+ radios.
+  </p>
+
+  <p>Your options are:</p>
+
+  <ul>
+    <li>
+      <strong>Upgrade to a dual-band device.</strong> Every major brand now sells straps that
+      broadcast both ANT+ and BLE simultaneously (Garmin HRM-Dual, Wahoo TICKR, Polar H10). This
+      is the simplest fix.
+    </li>
+    <li>
+      <strong>Use an ANT+ to BLE bridge.</strong> The <strong>NPE CABLE</strong> device plugs into
+      an ANT+ sensor and re-broadcasts it as BLE. It works, but adds cost and something else to
+      charge.
+    </li>
+  </ul>
+
+  <p>
+    To tell if your existing strap is ANT+-only: check the packaging or manual for the BLE or
+    Bluetooth logo. If it lists only ANT+, it won't connect directly.
+  </p>
+
+  <h2>Quick reference</h2>
+
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 20px 0;">
+    <thead>
+      <tr style="border-bottom: 1px solid var(--divider);">
+        <th style="text-align: left; padding: 8px 12px; color: var(--muted);">Device type</th>
+        <th style="text-align: left; padding: 8px 12px; color: var(--muted);">What to do</th>
+        <th style="text-align: left; padding: 8px 12px; color: var(--muted);">Data quality</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid var(--divider);">
+        <td style="padding: 8px 12px;">Polar H10 / H9</td>
+        <td style="padding: 8px 12px;">Just pair — broadcasts natively</td>
+        <td style="padding: 8px 12px;">Excellent (RR intervals)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--divider);">
+        <td style="padding: 8px 12px;">Garmin HRM-Dual / HRM-Pro</td>
+        <td style="padding: 8px 12px;">Just pair — broadcasts natively</td>
+        <td style="padding: 8px 12px;">Excellent (RR intervals)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--divider);">
+        <td style="padding: 8px 12px;">Wahoo TICKR / TICKR X</td>
+        <td style="padding: 8px 12px;">Just pair — broadcasts natively</td>
+        <td style="padding: 8px 12px;">Excellent (RR intervals)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--divider);">
+        <td style="padding: 8px 12px;">Garmin GPS watch</td>
+        <td style="padding: 8px 12px;">Enable "Broadcast Heart Rate" in Settings</td>
+        <td style="padding: 8px 12px;">Good (BPM only)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--divider);">
+        <td style="padding: 8px 12px;">Polar GPS watch</td>
+        <td style="padding: 8px 12px;">Enable "Broadcast HR" in Settings</td>
+        <td style="padding: 8px 12px;">Good (BPM only)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--divider);">
+        <td style="padding: 8px 12px;">Suunto / Coros watch</td>
+        <td style="padding: 8px 12px;">Enable "HR Broadcast" in Settings</td>
+        <td style="padding: 8px 12px;">Good (BPM only)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--divider);">
+        <td style="padding: 8px 12px;">Apple Watch</td>
+        <td style="padding: 8px 12px;">Install Wristly (App Store), run during session</td>
+        <td style="padding: 8px 12px;">Good (BPM only)</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--divider);">
+        <td style="padding: 8px 12px;">Samsung Galaxy Watch</td>
+        <td style="padding: 8px 12px;">Check settings or install Galaxy Store app</td>
+        <td style="padding: 8px 12px;">Good (BPM only)</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px 12px;">ANT+-only strap</td>
+        <td style="padding: 8px 12px;">Upgrade to dual-band, or use NPE CABLE bridge</td>
+        <td style="padding: 8px 12px;">N/A (won't connect directly)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Troubleshooting</h2>
+
+  <p><strong>The device doesn't appear in the scan.</strong> Make sure it is actively broadcasting
+  (chest straps need contact with skin; watches need broadcast mode enabled). Check that your phone's
+  Bluetooth is on and you've granted the app Bluetooth permission. On Android 12+, location permission
+  may also be required for BLE scanning — the app will prompt you.</p>
+
+  <p><strong>The device appears but won't connect.</strong> Your device may be connected to another
+  app or phone. Disconnect it from the other device first. Some straps only allow one BLE connection
+  at a time.</p>
+
+  <p><strong>It connects then drops.</strong> Keep your phone close (within 2 metres) during
+  sessions. Thick walls, microwaves, and 2.4 GHz Wi-Fi can interfere with BLE. Move away from
+  obvious sources of interference.</p>
+
+  <p><strong>Apple Watch keeps disconnecting.</strong> Wristly must stay in the foreground. watchOS
+  aggressively suspends background apps. Keep the watch screen on or set it to wake on wrist raise
+  during your session.</p>
+
+  <p class="mt-xl">
+    <a href="/how-it-works.html" class="btn-secondary">How the app works →</a>
+    <a href="/science.html" class="btn-secondary" style="margin-left: 8px;">The science</a>
+  </p>
+
+</article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-title">Learn</div>
+      <a href="/science.html">The Science</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/research.html">Research</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Tools</div>
+      <a href="/pacer.html">Breath Pacer</a>
+      <a href="/calculator.html">RF Calculator</a>
+      <a href="/compare.html">Compare Apps</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Heart Resonance</div>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/for-coaches.html">For Coaches</a>
+      <a href="mailto:support@heartresonance.app">Contact</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Legal</div>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Groma Apps · heartresonance.app
+  </div>
+</footer>
+
+</body>
+</html>
