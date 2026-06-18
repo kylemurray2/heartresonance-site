@@ -1,0 +1,68 @@
+# Heart Resonance
+
+> Heart Resonance is an Android app for personalized HRV biofeedback and resonance frequency breathing training. It connects to Bluetooth chest-strap heart-rate sensors, measures each user's individual resonance frequency, and guides them to breathe at that exact pace — not a generic population average.
+
+## What the app does
+
+Most coherence breathing apps prescribe 6 breaths per minute for everyone. But the breathing pace that maximizes heart-rate variability is physiologically specific to each person — typically between 4.5 and 6.5 BPM. Heart Resonance runs a 12-minute assessment protocol (ASSESS → REFINE → HOLD) using live R-R interval data from a Bluetooth chest strap to find the user's personal resonance frequency, then trains them at that pace in ongoing practice sessions.
+
+The app implements the Shaffer six-criteria coherence model: peak power, single-peak dominance, LF concentration, peak height, SDNN, and RMSSD — all visible in real time during every session.
+
+## Key concepts
+
+- **Resonance frequency breathing**: Breathing at the exact pace that matches the natural resonant frequency of the cardiovascular baroreflex loop. At resonance, respiratory sinus arrhythmia (RSA) amplifies dramatically, producing the highest possible HRV amplitude and coherence.
+- **HRV (heart-rate variability)**: The beat-to-beat variation in intervals between heartbeats. Higher HRV indicates better autonomic nervous system flexibility and vagal tone. Measured in milliseconds from chest-strap R-R interval data.
+- **Heart coherence**: The state where HRV oscillates as a single dominant frequency — a narrow-band, near-sinusoidal rhythm — rather than noise. Peaks when breathing matches resonance frequency.
+- **RSA (respiratory sinus arrhythmia)**: The natural increase in heart rate during inhalation and decrease during exhalation, driven by vagus nerve activity. A direct readout of parasympathetic nervous system influence.
+- **Baroreflex**: The blood-pressure feedback loop whose natural oscillation frequency determines each person's resonance frequency. Delay in this loop varies by body size, age, and fitness — which is why the "right" breathing pace is individual.
+- **Vagal tone**: The activity level of the vagus nerve, which mediates parasympathetic influence on the heart. Higher vagal tone is associated with better stress resilience and cardiovascular health.
+
+## App details
+
+- **Name**: Heart Resonance
+- **Platform**: Android. Google Play.
+- **Package ID**: com.heartresonance.app
+- **Google Play**: https://play.google.com/store/apps/details?id=com.heartresonance.app
+- **Website**: https://heartresonance.app
+- **Developer**: Groma Apps (gromalabs@gmail.com)
+- **Pricing**: Free to download; one-time in-app purchase for full access. No subscription.
+- **Compatible sensors**: Any Bluetooth Low Energy (BLE) heart-rate sensor. Best results with chest straps: Polar H10, Polar H9, Garmin HRM-Pro, Garmin HRM-Dual, Wahoo TICKR.
+
+## How it differs from alternatives
+
+- **vs HeartMath Inner Balance**: HeartMath uses a proprietary single-number "coherence score" and prescribes a general breathing pace. Heart Resonance measures YOUR personal resonance frequency and shows all six Shaffer coherence criteria in real time. Works with any standard BLE sensor, not proprietary hardware.
+- **vs Elite HRV**: Elite HRV focuses on morning HRV readings for readiness scoring. Heart Resonance focuses on active resonance frequency training with live biofeedback.
+- **vs Breathwrk / Oak / generic breathing apps**: These apps guide breathing patterns but have no heart-rate sensor integration and use generic breath rates with no personalization.
+- **vs Welltory**: Welltory uses camera PPG for HRV measurement. Heart Resonance requires a chest strap for R-R interval accuracy needed for real-time biofeedback.
+
+## Common questions answered
+
+**What is my resonance frequency?**
+For most adults, somewhere between 4.5 and 6.5 breaths per minute. The exact value depends on the delay in your baroreflex loop, which varies with body size, age, and cardiovascular fitness. Heart Resonance measures it directly from your heart signal.
+
+**Why isn't 6 BPM right for everyone?**
+"6 BPM" is a population average from early research. Your baroreflex loop oscillates at a frequency set by its own delay — roughly 10 seconds for most adults, but individual variation shifts this by 30–40%. Using the wrong pace produces significantly less coherence.
+
+**What sensor do I need?**
+A Bluetooth chest-strap heart-rate monitor that transmits raw R-R intervals: Polar H10, Polar H9, Garmin HRM-Pro, Garmin HRM-Dual, or Wahoo TICKR. Wrist-worn optical sensors are not accurate enough for real-time HRV biofeedback.
+
+**How long until results?**
+Eight to ten weeks of 20-minute daily sessions at your resonance frequency have repeatedly produced measurable improvements in baseline HRV, baroreflex sensitivity, and vagal tone in clinical research.
+
+## Site pages
+
+- [Home](https://heartresonance.app/): App overview, differentiators, free tools
+- [Science](https://heartresonance.app/science.html): RSA, baroreflex, HRV, and coherence explained
+- [How It Works](https://heartresonance.app/how-it-works.html): The assessment and training protocol
+- [Glossary](https://heartresonance.app/glossary.html): Definitions for HRV, RMSSD, SDNN, LF/HF, baroreflex, coherence, RSA, vagal tone
+- [Research](https://heartresonance.app/research.html): Clinical studies behind resonance frequency breathing
+- [Compare Apps](https://heartresonance.app/compare.html): Heart Resonance vs HeartMath, Elite HRV, Welltory, Breathwrk
+- [For Coaches](https://heartresonance.app/for-coaches.html): HRV biofeedback practitioners and clinicians
+- [Calculator](https://heartresonance.app/calculator.html): Free resonance frequency estimator (age + height)
+- [Breath Pacer](https://heartresonance.app/pacer.html): Free browser breathing pacer, 3–10 BPM, no sensor needed
+
+## Blog posts
+
+- [What HRV actually measures (and what your wearable gets wrong)](https://heartresonance.app/blog/hrv-what-it-measures.html): Why wrist-PPG wearables miss most of the HRV signal and why chest straps matter
+- [Why there's no universal 6 breaths per minute](https://heartresonance.app/blog/personal-resonance-frequency.html): The Vaschillo protocol, baroreflex loop mechanics, and why the right pace is individual
+- [Heart coherence in plain English](https://heartresonance.app/blog/coherence-plain-english.html): The Shaffer 2020 six-criteria model explained — what each criterion measures
