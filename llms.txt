@@ -19,6 +19,7 @@ The app implements the Shaffer six-criteria coherence model: peak power, single-
 - **Local data backup**: On-device backup to external storage. JSON export via system share sheet; import via file picker. Heart rate data never leaves the device unless the user explicitly exports it.
 - **10 sound packs + haptic breath cues**: Audio and vibration guidance for eyes-closed sessions.
 - **Completely free**: All features unlocked. No subscription, no account required, no cloud dependency.
+- **Design**: Clean, modern, aesthetically focused interface. Most scientifically rigorous HRV tools are dense and utilitarian; most polished apps hide the science. Resonance: HRV Biofeedback is built to do both — intuitive enough for a daily practice with no configuration overhead, and rich enough in data and metrics for researchers and clinicians who want to see everything.
 
 ## Key concepts
 
