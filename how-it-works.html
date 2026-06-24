@@ -4,10 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://heartresonance.app/how-it-works.html" />
-  <title>How Resonance: HRV Biofeedback Works — Adaptive Pacer, Coherence Scoring, Session Analysis</title>
-  <meta name="description" content="A walkthrough of the Resonance: HRV Biofeedback app: sensor pairing, the adaptive ASSESS-REFINE-HOLD pacer, Shaffer six-criteria coherence scoring, and session export." />
+  <title>Find Your Resonance Breathing Pace — How Resonance: HRV Biofeedback Works</title>
+  <meta name="description" content="How Resonance: HRV Biofeedback finds your personal resonance breathing pace in 12 minutes: the adaptive ASSESS → REFINE → HOLD protocol, live Shaffer coherence scoring, and sensor-free practice once your pace is stored." />
   <meta property="og:title" content="How Resonance: HRV Biofeedback Works" />
   <meta property="og:description" content="Adaptive pacer, Shaffer six-criteria scoring, full session export." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does Resonance: HRV Biofeedback find my resonance breathing pace?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The app runs a three-phase adaptive assessment. ASSESS tests five candidate breathing rates (typically 4.5–6.5 BPM) against your live HRV data, scoring each on peak LF power and spectral dominance. REFINE runs a finer pass around the best two or three candidates to pinpoint your exact pace. HOLD locks the pacer to the winning rate. The full protocol takes about 12 minutes. A Bluetooth chest-strap sensor is needed for the assessment; practice sessions afterward run without any hardware."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to find my breathing pace?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "About 12 minutes for the complete ASSESS → REFINE → HOLD protocol. The result is stored and used for all future sessions by default. You can re-run the assessment any time from the setup screen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use Resonance: HRV Biofeedback without a chest strap?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Once your resonance breathing pace has been identified, practice sessions run without any hardware — the pacer uses your stored frequency without needing a live sensor connection. A chest strap is only required for the initial 12-minute assessment and for sessions where you want live coherence biofeedback."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my resonance breathing pace changes over time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your resonance frequency is stable over months but can drift slowly with significant changes in cardiovascular fitness, body weight, or autonomic health. You can re-run the ASSESS protocol any time from the setup screen. Most users re-measure every few months."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='78' font-size='80'%3E%E2%99%A5%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
@@ -267,6 +307,32 @@
   <div class="text-center mt-xl">
     <a href="https://play.google.com/store/apps/details?id=com.heartresonance.app" class="btn-primary" target="_blank" rel="noopener">Get on Google Play ↗</a>
     <a href="/science.html" class="btn-secondary" style="margin-left: 8px;">Read the science</a>
+  </div>
+
+  <h2 id="faq">Common questions</h2>
+
+  <div class="faq-list">
+
+    <details class="faq-item">
+      <summary class="faq-question">How long does it take to find my breathing pace?</summary>
+      <p class="faq-answer">About 12 minutes for the full ASSESS → REFINE → HOLD protocol. ASSESS tests five candidate rates, REFINE narrows in on your best result, HOLD locks the pacer there. The result is stored for all future sessions. You can re-run any time from the setup screen.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">Do I need a sensor for every session?</summary>
+      <p class="faq-answer">No. A chest strap is only required for the initial 12-minute assessment (and for any session where you want live coherence biofeedback). Once your resonance breathing pace is stored, practice sessions run entirely without hardware.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">What if my frequency changes over time?</summary>
+      <p class="faq-answer">Your resonance breathing pace is stable over months but can drift slowly with significant changes in cardiovascular fitness, body weight, or autonomic health. Re-run the ASSESS protocol any time from the setup screen. Most users re-measure every few months.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">What does the REFINE phase add?</summary>
+      <p class="faq-answer">ASSESS tests five rates at 0.5 BPM spacing. REFINE zooms in on the two or three top-scoring candidates and re-tests at 0.25 BPM steps. This catches cases where your true resonance falls between two of the original candidates — which is common enough to matter.</p>
+    </details>
+
   </div>
 
 </article>

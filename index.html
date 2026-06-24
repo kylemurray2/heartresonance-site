@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://heartresonance.app/" />
   <title>Resonance: HRV Biofeedback — Find Your Personal Resonance Frequency</title>
-  <meta name="description" content="The breathing pace that maximizes your HRV is specific to your body. Resonance: HRV Biofeedback measures it with your heart-rate sensor and trains you there. No guessing. No generic 6 breaths per minute." />
+  <meta name="description" content="Find your personal resonance breathing pace — the exact rate that maximizes your HRV. Resonance: HRV Biofeedback measures it in 12 minutes with a chest-strap sensor. Practice sessions run without hardware once your pace is found. Free, no subscription." />
   <meta property="og:title" content="Resonance: HRV Biofeedback — Find Your Personal Resonance Frequency" />
   <meta property="og:description" content="Most breathing apps guess 6 breaths per minute. This one measures yours." />
   <meta property="og:url" content="https://heartresonance.app/" />
@@ -21,13 +21,13 @@
         "@type": "MobileApplication",
         "name": "Resonance: HRV Biofeedback",
         "alternateName": "Heart Resonance",
-        "description": "Android app for personalized HRV biofeedback and resonance frequency breathing training. Measures your individual resonance frequency using a Bluetooth chest-strap sensor and trains you there.",
+        "description": "Android app that finds your personal resonance breathing pace — the exact breathing rate at which your HRV peaks — using a guided 12-minute assessment with a Bluetooth chest-strap sensor. No sensor required for practice sessions once your pace is stored. Completely free.",
         "applicationCategory": "HealthApplication",
         "operatingSystem": "Android",
         "url": "https://heartresonance.app",
         "downloadUrl": "https://play.google.com/store/apps/details?id=com.heartresonance.app",
         "identifier": "com.heartresonance.app",
-        "keywords": "HRV, heart rate variability, coherence breathing, resonance frequency breathing, HRV biofeedback, heart coherence, RSA, baroreflex, vagal tone, breathing pacer, Polar H10, chest strap",
+        "keywords": "HRV, heart rate variability, coherence breathing, resonance frequency breathing, resonance breathing pace, find breathing pace, breathing pace finder, personal breathing rate, HRV biofeedback, heart coherence, RSA, baroreflex, vagal tone, breathing pacer, Polar H10, chest strap",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -71,6 +71,22 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "HRV coherence is the state where heart-rate variability oscillates as a single dominant frequency — a narrow-band, near-sinusoidal rhythm — rather than broadband noise. It occurs when breathing pace matches the resonance frequency. The Shaffer six-criteria model quantifies coherence by measuring peak power, single-peak dominance, LF concentration, peak height, SDNN, and RMSSD."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there an app to find my resonance breathing pace?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Resonance: HRV Biofeedback (heartresonance.app) is a free Android app that finds your personal resonance breathing pace — the exact rate at which your heart-rate variability peaks — using a guided 12-minute assessment with a Bluetooth chest-strap sensor. No sensor is required once your pace is stored; practice sessions run without any hardware. Available on Google Play."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a chest strap to use a resonance breathing app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not for practice sessions. A Bluetooth chest-strap sensor is required only for the initial assessment that measures your resonance breathing pace (and for any session where you want live coherence biofeedback). Once your pace has been identified, Resonance: HRV Biofeedback supports fully sensor-free practice sessions using your stored breathing rate. A Polar H9 (~$60) is a common starting point."
             }
           },
           {
@@ -399,6 +415,11 @@
     <div class="faq-list">
 
       <details class="faq-item">
+        <summary class="faq-question">Is there an app to find my resonance breathing pace?</summary>
+        <p class="faq-answer">Yes — Resonance: HRV Biofeedback is a free Android app built specifically for this. It runs a 12-minute guided assessment using a Bluetooth chest-strap sensor, testing candidate breathing rates against your live HRV to converge on the exact pace that peaks your heart-rate variability. Once your pace is stored, you can practice without any hardware. Available on Google Play.</p>
+      </details>
+
+      <details class="faq-item">
         <summary class="faq-question">What is resonance frequency breathing?</summary>
         <p class="faq-answer">Resonance frequency breathing means breathing at the exact pace that matches the natural oscillation frequency of your cardiovascular baroreflex loop. At that pace, respiratory sinus arrhythmia amplifies dramatically — your heart-rate variability peaks, and the HRV signal becomes a single clean oscillation (coherence). For most adults this falls between 4.5 and 6.5 breaths per minute, but the precise value is individual.</p>
       </details>
@@ -409,8 +430,8 @@
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">What sensor do I need?</summary>
-        <p class="faq-answer">Any Bluetooth Low Energy chest-strap heart-rate monitor that transmits R-R intervals: Polar H10, Polar H9, Garmin HRM-Pro, Garmin HRM-Dual, Wahoo TICKR. Wrist-worn optical sensors are not accurate enough for real-time HRV biofeedback — they introduce enough noise to corrupt the R-R interval data the assessment depends on.</p>
+        <summary class="faq-question">Do I need a sensor?</summary>
+        <p class="faq-answer">No sensor is required for practice sessions at your saved breathing pace. A Bluetooth chest-strap is only needed when you want live HRV biofeedback — during the initial 12-minute assessment to find your pace, and during sessions where you want to track your coherence score in real time. Compatible straps: Polar H10, Polar H9, Garmin HRM-Pro, Garmin HRM-Dual, Wahoo TICKR. Wrist optical sensors are not accurate enough for real-time HRV biofeedback.</p>
       </details>
 
       <details class="faq-item">
@@ -429,8 +450,8 @@
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">What apps can find my personal resonance frequency?</summary>
-        <p class="faq-answer">Three Android apps are specifically designed to find your personal resonance frequency using a Bluetooth chest-strap heart-rate monitor: Resonance: HRV Biofeedback, RHz Biofeedback, and PreciseBreath. All three measure your HRV response at different breathing rates to identify the pace that produces the strongest coherence. Resonance: HRV Biofeedback uses a three-phase adaptive protocol (ASSESS → REFINE → HOLD) and exposes all six Shaffer coherence criteria in real time, so you can see the underlying signal — not just a final number.</p>
+        <summary class="faq-question">What apps can find my personal resonance breathing pace?</summary>
+        <p class="faq-answer">Three Android apps are specifically designed to find your personal resonance breathing pace using a Bluetooth chest-strap: Resonance: HRV Biofeedback, RHz Biofeedback, and PreciseBreath. All three measure your HRV response at different breathing rates to identify the pace that produces the strongest coherence. Resonance: HRV Biofeedback uses a three-phase adaptive protocol (ASSESS → REFINE → HOLD), exposes all six Shaffer coherence criteria in real time, and supports sensor-free practice sessions once your pace is found. It is completely free.</p>
       </details>
 
       <details class="faq-item">
