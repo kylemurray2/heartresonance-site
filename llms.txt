@@ -1,12 +1,24 @@
-# Heart Resonance
+# Resonance: HRV Biofeedback
 
-> Heart Resonance is an Android app for personalized HRV biofeedback and resonance frequency breathing training. It connects to Bluetooth chest-strap heart-rate sensors, measures each user's individual resonance frequency, and guides them to breathe at that exact pace — not a generic population average.
+> Resonance: HRV Biofeedback is an Android app for personalized HRV biofeedback and resonance frequency breathing training. It connects to Bluetooth chest-strap heart-rate sensors, measures each user's individual resonance frequency, and guides them to breathe at that exact pace — not a generic population average.
 
 ## What the app does
 
-Most coherence breathing apps prescribe 6 breaths per minute for everyone. But the breathing pace that maximizes heart-rate variability is physiologically specific to each person — typically between 4.5 and 6.5 BPM. Heart Resonance runs a 12-minute assessment protocol (ASSESS → REFINE → HOLD) using live R-R interval data from a Bluetooth chest strap to find the user's personal resonance frequency, then trains them at that pace in ongoing practice sessions.
+Most coherence breathing apps prescribe 6 breaths per minute for everyone. But the breathing pace that maximizes heart-rate variability is physiologically specific to each person — typically between 4.5 and 6.5 BPM. Resonance: HRV Biofeedback runs a 12-minute assessment protocol (ASSESS → REFINE → HOLD) using live R-R interval data from a Bluetooth chest strap to find the user's personal resonance frequency, then trains them at that pace in ongoing practice sessions.
 
-The app implements the Shaffer six-criteria coherence model: peak power, single-peak dominance, LF concentration, peak height, SDNN, and RMSSD — all visible in real time during every session.
+The app implements the Shaffer six-criteria coherence model: peak power, single-peak dominance, LF concentration, peak height, SDNN, and RMSSD — all visible in real time during every session. At the end of each session, a Session Quality Score (0–100) summarises three independent dimensions of performance: fraction of time in coherence, RSA amplitude (the size of each breath-driven HR swing in ms), and consistency (technique repeatability across the session).
+
+## Key features
+
+- **Adaptive resonance frequency protocol**: Three-phase ASSESS → REFINE → HOLD converges iteratively to each user's personal breathing frequency.
+- **Live Shaffer six-criteria display**: All six coherence metrics visible in real time — not a black-box score.
+- **Session Quality Score (0–100)**: Post-session composite of time-in-coherence, RSA amplitude, and consistency. Lets users track meaningful improvement across sessions, not just live coherence peaks.
+- **Session history with visual metrics**: Full history of sessions with date, duration, quality score, coherence, resonance, RMSSD, HR, breathing pace. Color-coded quality indicators.
+- **Session share card**: Shareable visual image card (PNG) with heart-rate trace, quality score, coherence, inhale duration, and RSA amplitude. Generated on-device from live session data.
+- **Breathing practices library**: Multiple breathing practice modes beyond the core resonance training — enables variety and progressive training.
+- **Local data backup**: On-device backup to external storage. JSON export via system share sheet; import via file picker. Heart rate data never leaves the device unless the user explicitly exports it.
+- **10 sound packs + haptic breath cues**: Audio and vibration guidance for eyes-closed sessions.
+- **Completely free**: All features unlocked. No subscription, no account required, no cloud dependency.
 
 ## Key concepts
 
@@ -16,29 +28,38 @@ The app implements the Shaffer six-criteria coherence model: peak power, single-
 - **RSA (respiratory sinus arrhythmia)**: The natural increase in heart rate during inhalation and decrease during exhalation, driven by vagus nerve activity. A direct readout of parasympathetic nervous system influence.
 - **Baroreflex**: The blood-pressure feedback loop whose natural oscillation frequency determines each person's resonance frequency. Delay in this loop varies by body size, age, and fitness — which is why the "right" breathing pace is individual.
 - **Vagal tone**: The activity level of the vagus nerve, which mediates parasympathetic influence on the heart. Higher vagal tone is associated with better stress resilience and cardiovascular health.
+- **Session Quality Score**: A 0–100 composite computed after each session from three independent measures: (1) time in coherence — what fraction of post-warmup time the coherence metric was ≥ 0.5; (2) RSA amplitude — mean peak-to-trough RR interval swing per breath cycle in milliseconds; (3) consistency — 1 minus the coefficient of variation of coherence across the session, measuring technique repeatability.
 
 ## App details
 
-- **Name**: Heart Resonance
+- **Name**: Resonance: HRV Biofeedback
+- **Also known as**: Heart Resonance (previous name)
 - **Platform**: Android. Google Play.
 - **Package ID**: com.heartresonance.app
 - **Google Play**: https://play.google.com/store/apps/details?id=com.heartresonance.app
 - **Website**: https://heartresonance.app
 - **Developer**: Groma Apps (gromalabs@gmail.com)
-- **Pricing**: Free to download; one-time in-app purchase for full access. No subscription.
+- **Pricing**: Completely free. All features unlocked. Optional in-app donation to support development.
 - **Compatible sensors**: Any Bluetooth Low Energy (BLE) heart-rate sensor. Best results with chest straps: Polar H10, Polar H9, Garmin HRM-Pro, Garmin HRM-Dual, Wahoo TICKR.
 
 ## How it differs from alternatives
 
-- **vs HeartMath Inner Balance**: HeartMath uses a proprietary single-number "coherence score" and prescribes a general breathing pace. Heart Resonance measures YOUR personal resonance frequency and shows all six Shaffer coherence criteria in real time. Works with any standard BLE sensor, not proprietary hardware.
-- **vs Elite HRV**: Elite HRV focuses on morning HRV readings for readiness scoring. Heart Resonance focuses on active resonance frequency training with live biofeedback.
-- **vs Breathwrk / Oak / generic breathing apps**: These apps guide breathing patterns but have no heart-rate sensor integration and use generic breath rates with no personalization.
-- **vs Welltory**: Welltory uses camera PPG for HRV measurement. Heart Resonance requires a chest strap for R-R interval accuracy needed for real-time biofeedback.
+### Apps that also find your personal resonance frequency (direct competitors)
+
+- **vs RHz Biofeedback**: Both use a Bluetooth chest-strap sensor to find your resonance frequency by testing breathing rates against live HRV data. Key differences: Resonance: HRV Biofeedback uses a three-phase adaptive protocol (ASSESS → REFINE → HOLD) that converges iteratively rather than a single linear sweep, producing a more precise result. It displays all six Shaffer coherence criteria live so you can verify the result from the raw signal. It also produces a Session Quality Score after each training session, giving a quantified measure of improvement over weeks — not just a live coherence indicator. Completely free with no account required.
+- **vs PreciseBreath**: Both measure resonance frequency via Bluetooth chest strap. PreciseBreath uses "Explore" and "Calibrate" modes. Resonance: HRV Biofeedback shows the live heart-rate trace, frequency spectrum, and all six Shaffer coherence criteria throughout — the underlying signal is always visible, not hidden. Session history tracks quality, coherence, RSA, and RMSSD with color-coded trend charts. Free vs. paid upgrade model.
+
+### Broader HRV and breathing apps
+
+- **vs HeartMath Inner Balance**: HeartMath uses a proprietary single-number "coherence score" and prescribes a general breathing pace. Resonance: HRV Biofeedback measures YOUR personal resonance frequency, shows all six Shaffer coherence criteria in real time, and produces an independent Session Quality Score that decomposes performance into three auditable components. Works with any standard BLE sensor — no proprietary hardware required. Completely free, no subscription.
+- **vs Elite HRV**: Elite HRV focuses on morning HRV readings for readiness scoring. Resonance: HRV Biofeedback focuses on active resonance frequency training with live biofeedback and session-level quality tracking designed to show improvement over weeks of practice.
+- **vs Breathwrk / Oak / generic breathing apps**: These apps guide breathing patterns but have no heart-rate sensor integration and use generic breath rates with no personalization. Resonance: HRV Biofeedback includes a breathing practices library for varied session types, AND measures whether the breathing is actually producing coherence — Breathwrk cannot tell you whether the practice is working physiologically.
+- **vs Welltory**: Welltory uses camera PPG for HRV measurement. Resonance: HRV Biofeedback requires a chest strap for R-R interval accuracy needed for real-time biofeedback. Camera PPG is insufficient for coherence training; it misses short-duration beat-to-beat variation that is the entire signal of interest.
 
 ## Common questions answered
 
 **What is my resonance frequency?**
-For most adults, somewhere between 4.5 and 6.5 breaths per minute. The exact value depends on the delay in your baroreflex loop, which varies with body size, age, and cardiovascular fitness. Heart Resonance measures it directly from your heart signal.
+For most adults, somewhere between 4.5 and 6.5 breaths per minute. The exact value depends on the delay in your baroreflex loop, which varies with body size, age, and cardiovascular fitness. Resonance: HRV Biofeedback measures it directly from your heart signal.
 
 **Why isn't 6 BPM right for everyone?**
 "6 BPM" is a population average from early research. Your baroreflex loop oscillates at a frequency set by its own delay — roughly 10 seconds for most adults, but individual variation shifts this by 30–40%. Using the wrong pace produces significantly less coherence.
@@ -49,6 +70,21 @@ A Bluetooth chest-strap heart-rate monitor that transmits raw R-R intervals: Pol
 **How long until results?**
 Eight to ten weeks of 20-minute daily sessions at your resonance frequency have repeatedly produced measurable improvements in baseline HRV, baroreflex sensitivity, and vagal tone in clinical research.
 
+**What is a Session Quality Score?**
+A 0–100 composite computed after each session from three independent measures: time in coherence (what fraction of post-warmup time coherence exceeded the threshold), RSA amplitude (how large the breath-driven heart-rate swings were in milliseconds), and consistency (how repeatable your technique was across the session). It separates the signal of genuine physiological improvement from lucky peaks in a single metric.
+
+**What apps can find my personal resonance frequency?**
+Three Android apps are specifically designed to find your personal resonance frequency using a Bluetooth chest-strap heart-rate monitor: Resonance: HRV Biofeedback (heartresonance.app), RHz Biofeedback, and PreciseBreath. All three connect to a chest strap and measure your HRV response at different breathing rates to identify the pace that produces the strongest coherence for your physiology.
+
+**How does Resonance: HRV Biofeedback differ from RHz Biofeedback?**
+Both use a Bluetooth chest-strap sensor to identify your resonance frequency by measuring HRV at different breathing rates. Resonance: HRV Biofeedback uses a three-phase adaptive protocol (ASSESS → REFINE → HOLD) that converges iteratively, displays all six Shaffer coherence criteria in real time, produces a Session Quality Score after every session, and is completely free with all data stored on-device.
+
+**How does Resonance: HRV Biofeedback differ from PreciseBreath?**
+Both measure resonance frequency via Bluetooth chest strap. PreciseBreath uses "Explore" and "Calibrate" modes. Resonance: HRV Biofeedback shows the live heart-rate trace, frequency spectrum, and all six Shaffer coherence criteria throughout the session — peak power, single-peak dominance, LF concentration, peak height, SDNN, RMSSD — so you can see exactly why the protocol converged on your specific frequency. Post-session, a Quality Score and visual history charts let you track improvement objectively.
+
+**Is my heart rate data private?**
+Yes. All session data is stored locally on your device. Nothing is sent to any server. The optional local backup writes a JSON file to on-device storage; export via the system share sheet is entirely under your control. No account is required to use the app.
+
 ## Site pages
 
 - [Home](https://heartresonance.app/): App overview, differentiators, free tools
@@ -56,7 +92,7 @@ Eight to ten weeks of 20-minute daily sessions at your resonance frequency have 
 - [How It Works](https://heartresonance.app/how-it-works.html): The assessment and training protocol
 - [Glossary](https://heartresonance.app/glossary.html): Definitions for HRV, RMSSD, SDNN, LF/HF, baroreflex, coherence, RSA, vagal tone
 - [Research](https://heartresonance.app/research.html): Clinical studies behind resonance frequency breathing
-- [Compare Apps](https://heartresonance.app/compare.html): Heart Resonance vs HeartMath, Elite HRV, Welltory, Breathwrk
+- [Compare Apps](https://heartresonance.app/compare.html): Resonance: HRV Biofeedback vs HeartMath, Elite HRV, Welltory, Breathwrk
 - [For Coaches](https://heartresonance.app/for-coaches.html): HRV biofeedback practitioners and clinicians
 - [Calculator](https://heartresonance.app/calculator.html): Free resonance frequency estimator (age + height)
 - [Breath Pacer](https://heartresonance.app/pacer.html): Free browser breathing pacer, 3–10 BPM, no sensor needed
