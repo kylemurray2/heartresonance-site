@@ -18,7 +18,7 @@
         "name": "How does Resonance: HRV Biofeedback find my resonance breathing pace?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The app runs a three-phase adaptive assessment. ASSESS tests five candidate breathing rates (typically 4.5–6.5 BPM) against your live HRV data, scoring each on peak LF power and spectral dominance. REFINE runs a finer pass around the best two or three candidates to pinpoint your exact pace. HOLD locks the pacer to the winning rate. The full protocol takes about 12 minutes. A Bluetooth chest-strap sensor is needed for the assessment; practice sessions afterward run without any hardware."
+          "text": "The app runs a three-phase adaptive assessment. ASSESS tests five candidate breathing rates (typically 4.5–6.5 BPM) against your live HRV data, scoring each on peak LF power and spectral dominance. REFINE runs a finer pass around the best two or three candidates to pinpoint your exact pace. HOLD locks the pacer to the winning rate. The full protocol takes about 12 minutes. A Bluetooth heart-rate sensor — chest strap, arm band, or smartwatch — is needed for the assessment; practice sessions afterward run without any hardware."
         }
       },
       {
@@ -31,10 +31,10 @@
       },
       {
         "@type": "Question",
-        "name": "Can I use Resonance: HRV Biofeedback without a chest strap?",
+        "name": "Can I use Resonance: HRV Biofeedback without a chest strap, or with a smartwatch instead?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Once your resonance breathing pace has been identified, practice sessions run without any hardware — the pacer uses your stored frequency without needing a live sensor connection. A chest strap is only required for the initial 12-minute assessment and for sessions where you want live coherence biofeedback."
+          "text": "Yes to both. Once your resonance breathing pace has been identified, practice sessions run without any hardware at all — the pacer uses your stored frequency without needing a live sensor connection. And when a sensor is needed — for the initial 12-minute assessment or for live coherence biofeedback — it doesn't have to be a chest strap: GPS smartwatches from Garmin, Polar, Wahoo, Samsung, Amazfit, and Fitbit work too, once heart-rate broadcast is enabled in the watch's settings."
         }
       },
       {
@@ -90,10 +90,17 @@
   <h2 id="sensor">1. Sensor pairing</h2>
 
   <p>
-    Resonance: HRV Biofeedback needs beat-level heart-rate data — not a smoothed average, not a thirty-second
-    "RHR" — so it only talks to sensors that expose the Bluetooth Heart Rate Service with R-R
-    intervals. That's basically every chest strap on the market plus the best arm straps. Known-good
-    models:
+    Resonance: HRV Biofeedback reads heart rate over the standard Bluetooth Heart Rate Service —
+    that's not limited to chest straps. GPS smartwatches from Garmin, Polar, Wahoo, Samsung,
+    Amazfit, and Fitbit work too, once heart-rate broadcast is turned on in the watch's own
+    settings, and Apple Watch works via a free bridge app (Wristly). See the
+    <a href="/blog/connecting-heart-rate-devices.html">device connection guide</a> for setup steps
+    by device.
+  </p>
+
+  <p>
+    Dedicated chest straps and arm bands send individual beat-to-beat R-R intervals — the richest
+    data available for HRV analysis. Known-good models:
   </p>
 
   <ul>
@@ -110,11 +117,12 @@
   </p>
 
   <div class="callout">
-    <span class="callout-label">Why not wrist PPG?</span>
-    <p>Optical wrist sensors (Apple Watch, Fitbit, most Garmin watches) are fine for average
-    heart rate but their R-R timing is not accurate enough for HRV analysis at the resolution
-    resonance-frequency work needs. The beat-to-beat noise floor is simply too high. A $40
-    chest strap gives you cleaner data than a $400 watch for this specific task.</p>
+    <span class="callout-label">Chest strap vs. smartwatch</span>
+    <p>Chest straps transmit raw R-R intervals — the exact timing of every heartbeat — which gives
+    the app the cleanest signal for resonance and coherence scoring. GPS smartwatches broadcast an
+    averaged BPM stream instead, which the app still uses to run the full assessment and training
+    protocol, just with slightly less precision. A compatible smartwatch you already own is a fine
+    way to start; a chest strap is worth adding later if you want the most precise data.</p>
   </div>
 
   <h2 id="assessment">2. The adaptive assessment (ASSESS → REFINE → HOLD)</h2>
@@ -320,7 +328,7 @@
 
     <details class="faq-item">
       <summary class="faq-question">Do I need a sensor for every session?</summary>
-      <p class="faq-answer">No. A chest strap is only required for the initial 12-minute assessment (and for any session where you want live coherence biofeedback). Once your resonance breathing pace is stored, practice sessions run entirely without hardware.</p>
+      <p class="faq-answer">No. A Bluetooth heart-rate sensor — chest strap, arm band, or smartwatch — is only required for the initial 12-minute assessment (and for any session where you want live coherence biofeedback). Once your resonance breathing pace is stored, practice sessions run entirely without hardware.</p>
     </details>
 
     <details class="faq-item">
