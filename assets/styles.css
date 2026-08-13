@@ -401,6 +401,68 @@ blockquote {
   background: var(--panel);
 }
 
+/* ── Subscribe form ──────────────────────────────────────────────────── */
+
+.subscribe-box {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 26px 28px;
+  text-align: center;
+}
+.subscribe-box h2, .subscribe-box h3 { margin: 0 0 6px; }
+.subscribe-box p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  max-width: 440px;
+  margin: 0 auto 18px;
+  line-height: 1.6;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.subscribe-input {
+  flex: 1 1 260px;
+  max-width: 320px;
+  padding: 12px 14px;
+  border-radius: 7px;
+  border: 1px solid var(--border-2);
+  background: var(--bg-2);
+  color: var(--text);
+  font-size: 0.93rem;
+  font-family: var(--font-sans);
+}
+.subscribe-input::placeholder { color: var(--dim); }
+.subscribe-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.subscribe-form .btn-primary {
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+}
+.subscribe-note {
+  margin: 10px 0 0;
+  font-size: 0.78rem;
+  color: var(--dim);
+  max-width: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ── Layout containers ───────────────────────────────────────────────── */
 
 .section {

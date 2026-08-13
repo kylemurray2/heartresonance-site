@@ -39,6 +39,25 @@
   </div>
 </div>
 
+<div class="section section-narrow">
+  <div class="subscribe-box">
+    <h2>Subscribe for new posts</h2>
+    <p>Get an email when a new post goes up. No spam, unsubscribe anytime.</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/groma"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.com/groma', 'popupwindow')"
+      class="subscribe-form"
+    >
+      <label for="bd-email-blog" class="sr-only">Email address</label>
+      <input type="email" name="email" id="bd-email-blog" placeholder="you@example.com" required class="subscribe-input" />
+      <input type="hidden" value="1" name="embed" />
+      <button type="submit" class="btn-primary">Subscribe</button>
+    </form>
+  </div>
+</div>
+
 <article class="prose">
   <p class="deck">
     Long-form pieces on heart-rate variability, breathing, measurement, and the science of the
