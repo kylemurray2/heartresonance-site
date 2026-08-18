@@ -1,0 +1,34 @@
+[
+  {
+    "id": "0",
+    "type": "TXT",
+    "host": "20260813162815pm._domainkey",
+    "value": "k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCAVZep/JrIZ7j0H9Ehaksj6PA5dVYPF85WFBarWdwM11F3BM2wPz9WLD/EXSeUukwNPs34Fu7mZfLLzD76YYUpUdo0dJEhztElqH6FjB7E7f6HLd6XydCZqABpk1MhDAaqy2M8l9TMBeF+mOzKEQqWISKHzJGT0fCMMFmA//Te8wIDAQAB",
+    "optional": false,
+    "valid": false
+  },
+  {
+    "id": "1",
+    "type": "CNAME",
+    "host": "pm-bounces",
+    "value": "pm.mtasv.net",
+    "optional": false,
+    "valid": false
+  },
+  {
+    "id": "2",
+    "type": "CNAME",
+    "host": "track",
+    "value": "webhook-consumer.buttondown.email",
+    "optional": false,
+    "valid": false
+  },
+  {
+    "id": "3",
+    "type": "TXT",
+    "host": "_dmarc",
+    "value": "v=DMARC1; p=quarantine; rua=mailto:940f0c149d7a65a4c6b0f32e5246f6fa@inbound.postmarkapp.com; aspf=r; pct=100",
+    "optional": false,
+    "valid": false
+  }
+]
