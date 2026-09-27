@@ -73,6 +73,12 @@
         <span class="value"><span id="cycleLabel">10.9</span>s</span>
       </div>
 
+      <div class="pacer-row">
+        <label for="minutes">Timer</label>
+        <span class="value" id="timerSet"><input type="number" id="minutes" min="0" max="120" step="1" placeholder="off" inputmode="numeric" /> min</span>
+        <span class="value" id="timerLeft" hidden></span>
+      </div>
+
       <button class="btn-full" id="startStop">Start</button>
 
     </div>
@@ -184,10 +190,15 @@
   const ratioLabel = document.getElementById('ratioLabel');
   const cycleLabel = document.getElementById('cycleLabel');
   const btn = document.getElementById('startStop');
+  const minutesInput = document.getElementById('minutes');
+  const timerSet = document.getElementById('timerSet');
+  const timerLeft = document.getElementById('timerLeft');
 
   let running = false;
   let startTime = 0;
   let rafId = null;
+  let endTime = null;
+  let lastPhaseNorm = 0;
 
   function formatRatio(r) {
     if (r >= 1) return '1 : ' + r.toFixed(1).replace(/\.0$/, '');
@@ -207,11 +218,28 @@
     cycleLabel.textContent = cycleSeconds().toFixed(1);
   }
 
+  function formatClock(sec) {
+    const s = Math.max(0, Math.ceil(sec));
+    return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+  }
+
   function tick(now) {
     if (!running) return;
     const elapsed = (now - startTime) / 1000;
     const cycle = cycleSeconds();
     const ratio = parseFloat(ratioInput.value);
+
+    const phaseNormNow = (elapsed % cycle) / cycle;
+    if (endTime !== null) {
+      const left = (endTime - now) / 1000;
+      // Let the current breath finish rather than cutting off mid-inhale.
+      if (left <= 0 && phaseNormNow < lastPhaseNorm) {
+        stop('DONE');
+        return;
+      }
+      timerLeft.textContent = left > 0 ? formatClock(left) + ' left' : 'last breath';
+    }
+    lastPhaseNorm = phaseNormNow;
 
     // Inhale fraction of cycle: ratio / (1 + ratio) if ratio >= 1 means in:ex = 1:ratio, so inhale = 1/(1+ratio)
     // We treat ratio slider as inhale_len / exhale_len. inhale_frac = ratio / (1 + ratio).
@@ -242,22 +270,36 @@
   function start() {
     running = true;
     startTime = performance.now();
+    lastPhaseNorm = 0;
+    const minutes = parseFloat(minutesInput.value);
+    endTime = minutes > 0 ? startTime + minutes * 60000 : null;
+    if (endTime !== null) {
+      timerLeft.textContent = formatClock(minutes * 60) + ' left';
+      timerSet.hidden = true;
+      timerLeft.hidden = false;
+    }
     btn.textContent = 'Stop';
     btn.classList.remove('ghost');
     rafId = requestAnimationFrame(tick);
   }
 
-  function stop() {
+  function stop(label) {
     running = false;
     if (rafId) cancelAnimationFrame(rafId);
+    endTime = null;
+    timerSet.hidden = false;
+    timerLeft.hidden = true;
     btn.textContent = 'Start';
     ball.style.width = '90px';
     ball.style.height = '90px';
     ball.style.fontSize = '0.88rem';
-    phaseLabel.textContent = 'READY';
+    phaseLabel.textContent = label || 'READY';
   }
 
   btn.addEventListener('click', () => running ? stop() : start());
+  minutesInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !running) start();
+  });
   rateInput.addEventListener('input', updateLabels);
   ratioInput.addEventListener('input', updateLabels);
 
