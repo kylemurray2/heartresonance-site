@@ -1203,3 +1203,14 @@ details[open] .faq-question::after { content: "−"; }
 
 .prose .store-buttons { margin: 1.4em 0; justify-content: flex-start; }
 .prose .store-btn { border-bottom: 1px solid var(--border-2); }
+
+.card-link { display: block; border-bottom: 1px solid var(--border); transition: transform 0.15s ease, border-color 0.15s ease; }
+.card-link:hover { transform: translateY(-2px); border-color: var(--border-2); }
+.card-link h3 { color: var(--text); }
+.card-link p { color: var(--text-2); }
+
+.nav-cta-group { display: flex; gap: 8px; flex-shrink: 0; }
+@media (max-width: 720px) {
+  .nav-cta-group { gap: 6px; }
+  .nav-cta-group .nav-cta { padding: 5px 9px; font-size: 0.78rem; }
+}
