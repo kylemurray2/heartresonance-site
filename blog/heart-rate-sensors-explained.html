@@ -90,13 +90,12 @@
     app very different data. Here's what the differences are, what we saw when we wore a strap and
     a watch at the same time, and which one we'd buy.
   </p>
-  <div class="meta">Published October 2026 · 5 minute read</div>
+  <div class="meta">Published October 2026 · 4 minute read</div>
 
   <nav style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:28px 0 0;">
     <span style="font-size:0.78rem; color:var(--muted); margin-right:4px;">Jump to:</span>
     <a href="#kinds" class="pill">What a sensor sends</a>
     <a href="#purposes" class="pill">What each is good for</a>
-    <a href="#why-averaging" class="pill">What averaging does</a>
     <a href="#we-measured" class="pill">What we measured</a>
     <a href="#recommendation" class="pill">What we'd recommend</a>
   </nav>
@@ -133,34 +132,14 @@
   <ul>
     <li><strong>Effort on a run or ride:</strong> averaged BPM. A steady number is what you want.</li>
     <li><strong>Resting and overnight trends:</strong> daily scores.</li>
-    <li><strong>Watching your heart rate follow a slow breath:</strong> any of them, even averaged
-    BPM, because the wave is big when you breathe slowly. RR intervals show more of its detail.</li>
+    <li><strong>Watching your heart rate follow a slow breath:</strong> any of them, including
+    averaged BPM. RR intervals show it in finer detail.</li>
     <li><strong>Comparing breathing paces:</strong> RR intervals for the finest detail, averaged BPM
     for a good estimate.</li>
-    <li><strong>HRV in milliseconds (RMSSD, SDNN):</strong> RR intervals. Averaging smooths away the
-    beat-to-beat differences these numbers are built from.</li>
+    <li><strong>HRV in milliseconds (RMSSD, SDNN):</strong> RR intervals. An averaged signal doesn't
+    carry the beat-to-beat differences these numbers are built from.</li>
     <li><strong>Checking for skipped or extra beats:</strong> ECG.</li>
   </ul>
-
-  <h2 id="why-averaging">What averaging does to a breathing wave</h2>
-
-  <p>
-    Averaging suits a watch. Raw beat timing would be jumpy in the middle of a workout, and a steady
-    number is what you want there. For breathing work, three things happen:
-  </p>
-
-  <ul>
-    <li><strong>It trims fast rhythms more than slow ones.</strong> An average over a few seconds
-    hardly touches a 14-second breath and takes more out of an 8-second one.</li>
-    <li><strong>It runs late,</strong> because it's built from beats that have already happened.</li>
-    <li><strong>Whole numbers make a staircase,</strong> which matters when the wave is only a few
-    bpm tall.</li>
-  </ul>
-
-  <p>
-    Slow breathing is the easy case, since the wave is big and slow. The effects grow as it gets
-    faster and smaller.
-  </p>
 
   <h2 id="we-measured">What we measured</h2>
 
@@ -171,36 +150,14 @@
     some talking and shifting around. A Mac logged both sensors on one clock, plus the H10's raw ECG.
   </p>
 
-  <div class="figure">
-    <svg viewBox="0 0 640 270" role="img" style="width:100%;height:auto" aria-label="Two minutes of heart rate while breathing at 4.3 breaths per minute. The chest strap shows a wave of about 15 beats per minute per breath. The watch shows a smaller, stepped wave that arrives several seconds later."><line x1="46" x2="604" y1="222.0" y2="222.0" stroke="var(--border)" stroke-width="1"/><text x="38" y="226.0" text-anchor="end" class="ax">50</text><line x1="46" x2="604" y1="173.5" y2="173.5" stroke="var(--border)" stroke-width="1"/><text x="38" y="177.5" text-anchor="end" class="ax">55</text><line x1="46" x2="604" y1="125.0" y2="125.0" stroke="var(--border)" stroke-width="1"/><text x="38" y="129.0" text-anchor="end" class="ax">60</text><line x1="46" x2="604" y1="76.5" y2="76.5" stroke="var(--border)" stroke-width="1"/><text x="38" y="80.5" text-anchor="end" class="ax">65</text><line x1="46" x2="604" y1="28.0" y2="28.0" stroke="var(--border)" stroke-width="1"/><text x="38" y="32.0" text-anchor="end" class="ax">70</text><text x="46.0" y="240" text-anchor="middle" class="ax">0 s</text><text x="139.0" y="240" text-anchor="middle" class="ax">20 s</text><text x="232.0" y="240" text-anchor="middle" class="ax">40 s</text><text x="325.0" y="240" text-anchor="middle" class="ax">60 s</text><text x="418.0" y="240" text-anchor="middle" class="ax">80 s</text><text x="511.0" y="240" text-anchor="middle" class="ax">100 s</text><text x="604.0" y="240" text-anchor="middle" class="ax">120 s</text><text x="38" y="14" text-anchor="end" class="ax">bpm</text><path d="M47.0 154.1 H53.1 V154.1 H53.1 V154.1 H54.6 V154.1 H56.2 V154.1 H59.3 V154.1 H63.9 V154.1 H63.9 V154.1 H65.4 V154.1 H68.5 V154.1 H70.0 V154.1 H74.6 V144.4 H74.6 V144.4 H79.2 V144.4 H79.2 V144.4 H82.3 V125.0 H86.9 V125.0 H86.9 V125.0 H91.5 V125.0 H91.5 V125.0 H96.1 V125.0 H96.1 V125.0 H102.2 V125.0 H102.2 V134.7 H103.8 V134.7 H105.3 V134.7 H108.4 V134.7 H113.0 V154.1 H113.0 V154.1 H116.0 V154.1 H117.6 V154.1 H119.1 V173.5 H122.2 V173.5 H123.7 V163.8 H126.8 V163.8 H128.3 V163.8 H131.4 V163.8 H132.9 V163.8 H136.0 V163.8 H137.5 V125.0 H140.6 V125.0 H142.1 V125.0 H145.2 V125.0 H148.3 V125.0 H151.3 V125.0 H151.3 V125.0 H157.5 V125.0 H157.5 V134.7 H159.0 V134.7 H162.1 V134.7 H165.1 V134.7 H166.7 V144.4 H168.2 V144.4 H171.3 V144.4 H172.8 V144.4 H177.4 V183.2 H177.4 V183.2 H183.5 V192.9 H183.5 V192.9 H185.1 V192.9 H191.2 V192.9 H191.2 V192.9 H191.2 V192.9 H197.4 V183.2 H197.4 V183.2 H198.9 V183.2 H200.4 V183.2 H206.6 V163.8 H208.1 V163.8 H208.1 V134.7 H215.8 V134.7 H215.8 V134.7 H215.8 V134.7 H220.4 V115.3 H220.4 V115.3 H222.0 V115.3 H225.0 V115.3 H226.6 V115.3 H228.1 V115.3 H234.2 V134.7 H234.2 V134.7 H237.3 V144.4 H238.8 V144.4 H240.3 V144.4 H244.9 V144.4 H244.9 V163.8 H248.0 V163.8 H249.5 V192.9 H255.7 V192.9 H255.7 V192.9 H257.2 V192.9 H261.8 V183.2 H261.8 V183.2 H269.5 V173.5 H269.5 V173.5 H271.0 V173.5 H271.0 V173.5 H272.5 V163.8 H277.2 V163.8 H277.2 V144.4 H283.3 V144.4 H284.9 V144.4 H284.9 V144.4 H289.5 V125.0 H289.5 V125.0 H291.0 V144.4 H303.2 V144.4 H303.2 V144.4 H303.2 V144.4 H303.2 V144.4 H303.2 V144.4 H304.8 V163.8 H314.0 V163.8 H314.0 V163.8 H314.0 V163.8 H315.5 V173.5 H317.0 V173.5 H324.7 V173.5 H324.7 V173.5 H324.7 V173.5 H330.9 V173.5 H330.9 V173.5 H330.9 V173.5 H333.9 V163.8 H338.5 V163.8 H340.1 V163.8 H340.1 V163.8 H343.1 V154.1 H346.2 V154.1 H352.3 V115.3 H352.3 V115.3 H352.3 V115.3 H353.9 V115.3 H364.6 V125.0 H364.6 V125.0 H364.6 V134.7 H369.2 V134.7 H369.2 V134.7 H369.2 V134.7 H370.8 V144.4 H372.3 V144.4 H375.4 V154.1 H376.9 V154.1 H381.5 V154.1 H381.5 V154.1 H389.2 V154.1 H389.2 V154.1 H389.2 V154.1 H399.9 V154.1 H403.0 V154.1 H403.0 V154.1 H403.0 V144.4 H403.0 V144.4 H404.5 V144.4 H409.1 V144.4 H409.1 V125.0 H416.8 V125.0 H416.8 V125.0 H416.8 V125.0 H416.8 V105.6 H419.9 V105.6 H421.4 V105.6 H424.5 V105.6 H427.5 V125.0 H429.1 V125.0 H430.6 V134.7 H433.7 V134.7 H436.7 V144.4 H438.3 V144.4 H439.8 V144.4 H442.9 V144.4 H444.4 V163.8 H447.5 V163.8 H449.0 V163.8 H452.1 V163.8 H453.6 V163.8 H456.7 V163.8 H458.2 V154.1 H461.3 V154.1 H462.8 V144.4 H467.4 V144.4 H469.0 V144.4 H470.5 V144.4 H473.6 V86.2 H479.7 V86.2 H479.7 V86.2 H479.7 V86.2 H485.8 V86.2 H485.9 V86.2 H487.4 V105.6 H490.4 V105.6 H492.0 V115.3 H493.5 V115.3 H496.6 V115.3 H499.7 V115.3 H501.2 V144.4 H502.7 V144.4 H505.8 V144.4 H508.9 V144.4 H510.4 V163.8 H512.0 V163.8 H516.6 V163.8 H516.6 V163.8 H522.7 V154.1 H522.7 V154.1 H524.2 V154.1 H525.7 V154.1 H530.3 V144.4 H530.3 V144.4 H536.5 V144.4 H536.5 V144.4 H539.6 V86.2 H539.6 V86.2 H545.7 V86.2 H545.7 V86.2 H547.2 V86.2 H551.8 V86.2 H551.8 V86.2 H556.4 V86.2 H556.4 V105.6 H559.5 V105.6 H562.6 V105.6 H564.1 V105.6 H565.6 V115.3 H570.3 V115.3 H570.3 V125.0 H573.4 V125.0 H574.9 V144.4 H578.0 V144.4 H579.5 V144.4 H582.6 V144.4 H584.1 V134.7 H587.1 V134.7 H588.7 V134.7 H594.8 V134.7 H594.8 V125.0 H596.3 V125.0 H597.9 V125.0 H600.9 V125.0 H602.5 V115.3" fill="none" stroke="var(--green)" stroke-width="2"/><path d="M48.0 130.8 L52.5 111.4 L56.9 91.1 L61.2 79.4 L65.6 87.2 L70.2 123.1 L75.2 168.7 L80.5 193.9 L85.7 188.1 L91.0 193.9 L96.1 181.3 L101.1 166.7 L105.9 139.6 L110.6 126.9 L115.1 112.4 L119.7 104.6 L124.1 96.9 L128.5 101.7 L133.1 120.2 L138.0 144.4 L143.3 197.8 L148.8 212.3 L154.2 210.4 L159.6 199.7 L164.7 185.1 L169.8 174.5 L174.7 154.1 L179.4 132.8 L184.0 116.3 L188.5 102.7 L192.8 86.2 L197.2 93.0 L201.7 103.7 L206.5 142.5 L211.9 201.6 L217.4 215.2 L222.8 207.4 L228.1 196.8 L233.3 185.1 L238.3 165.7 L243.1 144.4 L247.8 131.8 L252.4 121.1 L256.9 103.7 L261.4 112.4 L266.0 115.3 L270.8 135.7 L276.0 187.1 L281.2 195.8 L286.6 197.8 L291.8 192.9 L297.1 191.9 L302.2 172.5 L307.1 157.0 L311.8 138.6 L316.5 127.9 L321.1 114.3 L325.5 97.8 L330.0 99.8 L334.5 110.5 L339.4 157.0 L344.9 206.5 L350.3 210.4 L355.7 207.4 L361.1 201.6 L366.0 159.9 L370.8 137.6 L375.2 102.7 L379.6 85.2 L383.7 55.2 L387.9 57.1 L392.1 63.9 L396.4 78.4 L400.9 99.8 L405.6 129.8 L410.6 171.6 L415.8 186.1 L421.0 185.1 L426.2 183.2 L431.2 168.7 L436.0 142.5 L440.6 117.2 L445.0 91.1 L449.2 69.7 L453.4 59.0 L457.6 56.1 L461.8 73.6 L466.4 114.3 L471.4 162.8 L476.6 193.9 L481.8 188.1 L487.0 181.3 L492.0 162.8 L496.8 145.4 L501.4 121.1 L506.0 109.5 L510.4 95.9 L514.7 82.3 L518.9 63.9 L523.1 61.9 L527.4 77.5 L531.9 107.5 L536.8 149.2 L541.9 177.4 L546.9 169.6 L551.9 159.9 L556.7 147.3 L561.5 134.7 L566.1 120.2 L570.6 107.5 L575.1 104.6 L579.5 93.0 L583.8 77.5 L588.0 59.0 L592.1 63.9 L596.6 92.0 L601.3 136.6" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/><line x1="46" x2="68" y1="252" y2="252" stroke="var(--accent)" stroke-width="2"/><text x="74" y="256" class="ax">Polar H10 chest strap, every beat</text><line x1="338" x2="360" y1="252" y2="252" stroke="var(--green)" stroke-width="2"/><text x="366" y="256" class="ax">Garmin Forerunner, broadcast bpm</text></svg>
-    <p class="figcaption">Two minutes at 4.3 breaths per minute. Each breath is one rise and fall. The watch's wave is smaller, stepped, and a few seconds late, which is what averaging does.</p>
-  </div>
-
   <p>
     First, the strap. Across 1,959 beats, the intervals it reported were within a median of 2.4 ms
     of what we measured from its own ECG, so we used it as the reference.
   </p>
 
   <p>
-    The watch followed the same rhythm, just smaller. This is how much of the strap's breathing wave
-    showed up in the watch's data:
-  </p>
-
-  <div class="tablewrap"><table>
-    <thead>
-      <tr><th>Breathing pace</th><th>Watch wave, as a share of the strap's</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>4.0–4.5 breaths/min</td><td>about 43%</td></tr>
-      <tr><td>5.0–5.5</td><td>about 20%</td></tr>
-      <tr><td>6.0–6.5</td><td>about 15%</td></tr>
-      <tr><td>6.5 and faster</td><td>about 12–15%</td></tr>
-    </tbody>
-  </table></div>
-
-  <p>
-    It also arrived about 7 seconds after the strap's, which is normal for an average. Worth knowing
-    if you compare the live graph to the pacer.
+    The watch's reading arrives about 7 seconds after the strap's, which is normal for an averaged
+    value, so the live graph trails the pacer a little.
   </p>
 
   <div class="callout">
@@ -214,8 +171,8 @@
   </div>
 
   <p>
-    HRV in milliseconds is where the two differ most: RMSSD came out around 32 ms from the strap and
-    10 ms from the watch.
+    RMSSD, the HRV number in milliseconds, needs beat-to-beat intervals, so it's the one place we'd
+    reach for a strap: it came out around 32 ms from the strap and 10 ms from the watch's BPM stream.
   </p>
 
   <p style="color:var(--muted); font-size:0.88rem;">
