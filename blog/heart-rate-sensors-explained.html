@@ -9,6 +9,7 @@
   <meta property="og:title" content="RR, ECG, or Averaged BPM: Choosing a Heart Rate Sensor" />
   <meta property="og:description" content="What your sensor actually sends, what each type is good for, and what happened when we wore a chest strap and a watch at the same time." />
   <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://heartresonance.app/assets/heart-rate-sensors-header.jpg" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,6 +38,15 @@
   <link rel="stylesheet" href="/assets/styles.css" />
   <style>
     .prose svg text.ax { fill: var(--muted); font-family: var(--font-mono); font-size: 11px; }
+    .page-hero.has-art { height: auto; display: block; overflow: visible; }
+    .page-hero.has-art::after { display: none; }
+    .page-hero.has-art .hero-bg {
+      position: static; display: block; width: 100%; height: auto;
+      aspect-ratio: 1671 / 941; max-height: 520px; object-fit: cover; object-position: center 62%;
+      -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent);
+      mask-image: linear-gradient(to bottom, #000 82%, transparent);
+    }
+    .page-hero.has-art .hero-inner { padding-top: 1rem; }
     .prose .tablewrap { overflow-x: auto; margin: 1.5em 0; }
     .prose .tablewrap table { margin: 0; min-width: 34rem; }
   </style>
@@ -66,8 +76,8 @@
 
 <main>
 
-<div class="page-hero">
-  <img src="/assets/zen_meditation_04.png" class="hero-bg" alt="" />
+<div class="page-hero has-art">
+  <img src="/assets/heart-rate-sensors-header.jpg" class="hero-bg" width="1671" height="941" alt="Illustration of a chest strap, a sports watch and a wrist band on a wooden table, each showing a heart rate of 62 bpm." />
   <div class="hero-inner">
     <span class="kicker">Blog · Measurement</span>
     <h1>RR, ECG, or averaged BPM: choosing a heart rate sensor</h1>
