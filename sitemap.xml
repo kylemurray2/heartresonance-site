@@ -56,6 +56,11 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://heartresonance.app/blog/heart-rate-sensors-explained.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://heartresonance.app/blog/now-on-the-app-store.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>

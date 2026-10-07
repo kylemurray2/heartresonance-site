@@ -176,6 +176,7 @@ Yes. All session data is stored on your device only. Nothing is sent to any serv
 
 ## Blog posts
 
+- [RR, ECG, or averaged BPM: choosing a heart rate sensor](https://heartresonance.app/blog/heart-rate-sensors-explained.html): The kinds of heart data a sensor can send, what each is good for, a side-by-side recording of a Polar H10 and a Garmin watch, and the recommended sensor
 - [Resonance is now on the App Store](https://heartresonance.app/blog/now-on-the-app-store.html): iPhone launch announcement — what's included and how to pair a sensor. App Store: https://apps.apple.com/us/app/resonance-hrv-biofeedback/id6812053481
 - [What HRV actually measures (and what your wearable gets wrong)](https://heartresonance.app/blog/hrv-what-it-measures.html): Why wrist-PPG wearables miss most of the HRV signal and why chest straps matter
 - [Why there's no universal 6 breaths per minute](https://heartresonance.app/blog/personal-resonance-frequency.html): The Vaschillo protocol, baroreflex loop mechanics, and why the right pace is individual

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://heartresonance.app/blog/heart-rate-sensors-explained.html" />
+  <title>RR, ECG, or Averaged BPM: Choosing a Heart Rate Sensor — Resonance: HRV Biofeedback</title>
+  <meta name="description" content="Chest straps, watches and optical bands send different kinds of heart data: raw ECG, beat-to-beat RR intervals, or an averaged BPM. What each one is good for, what we measured wearing a Polar H10 and a Garmin watch together, and which sensor we recommend for the app." />
+  <meta property="og:title" content="RR, ECG, or Averaged BPM: Choosing a Heart Rate Sensor" />
+  <meta property="og:description" content="What your sensor actually sends, what each type is good for, and what happened when we wore a chest strap and a watch at the same time." />
+  <meta property="og:type" content="article" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "RR, ECG, or Averaged BPM: Choosing a Heart Rate Sensor",
+    "description": "What each kind of heart rate sensor sends, what each is good for, and a side-by-side recording of a Polar H10 chest strap and a Garmin watch.",
+    "url": "https://heartresonance.app/blog/heart-rate-sensors-explained.html",
+    "datePublished": "2026-10-07",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Resonance: HRV Biofeedback",
+      "url": "https://heartresonance.app"
+    },
+    "about": [
+      { "@type": "Thing", "name": "Heart rate sensors" },
+      { "@type": "Thing", "name": "R-R intervals" },
+      { "@type": "Thing", "name": "Electrocardiography" },
+      { "@type": "Thing", "name": "Photoplethysmography" }
+    ],
+    "keywords": "heart rate sensor, chest strap, Polar H10, RR intervals, ECG, PPG, Garmin, Apple Watch, HRV biofeedback, resonance frequency"
+  }
+  </script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <style>
+    .prose svg text.ax { fill: var(--muted); font-family: var(--font-mono); font-size: 11px; }
+    .prose .tablewrap { overflow-x: auto; margin: 1.5em 0; }
+    .prose .tablewrap table { margin: 0; min-width: 34rem; }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark">♥</span>
+      <span class="brand-name">Resonance: HRV Biofeedback</span>
+    </a>
+    <nav class="site-nav">
+      <a href="/science.html">Science</a>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/blog/connecting-heart-rate-devices.html">Connect a Device</a>
+      <a href="/pacer.html">Pacer</a>
+      <a href="/calculator.html">Calculator</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+    <div class="nav-cta-group">
+      <a href="https://apps.apple.com/us/app/resonance-hrv-biofeedback/id6812053481" class="nav-cta" target="_blank" rel="noopener">App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.heartresonance.app&amp;referrer=utm_source%3Dheartresonance.app%26utm_medium%3Dreferral%26utm_campaign%3Dblog-heart-rate-sensors-explained" class="nav-cta" target="_blank" rel="noopener">Google Play</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<div class="page-hero">
+  <img src="/assets/zen_meditation_04.png" class="hero-bg" alt="" />
+  <div class="hero-inner">
+    <span class="kicker">Blog · Measurement</span>
+    <h1>RR, ECG, or averaged BPM: choosing a heart rate sensor</h1>
+  </div>
+</div>
+
+<article class="prose">
+  <p class="deck">
+    "Heart rate sensor" covers at least three different kinds of data. A chest strap, a watch and
+    an optical arm band can all show 62 on the screen and still hand an app very different
+    material to work with. Here is what each kind is, what it's good for, what we saw when we wore
+    a strap and a watch together, and which one we'd pick for this app.
+  </p>
+  <div class="meta">Published October 2026 · 7 minute read</div>
+
+  <nav style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:28px 0 0;">
+    <span style="font-size:0.78rem; color:var(--muted); margin-right:4px;">Jump to:</span>
+    <a href="#kinds" class="pill">The kinds of data</a>
+    <a href="#purposes" class="pill">Good for what</a>
+    <a href="#why-averaging" class="pill">What averaging does</a>
+    <a href="#we-measured" class="pill">What we measured</a>
+    <a href="#recommendation" class="pill">Our recommendation</a>
+  </nav>
+
+  <h2 id="kinds">Five kinds of heart data</h2>
+
+  <p>
+    Every heart rate device does the same first job: it detects heartbeats. What differs is how it
+    detects them and how much of that detail it passes on. From most to least detailed:
+  </p>
+
+  <div class="tablewrap"><table>
+    <thead>
+      <tr><th>Kind</th><th>What it is</th><th>Where it comes from</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Raw ECG</strong></td>
+        <td>The heart's electrical waveform, sampled about 130 times a second on a Polar H10. Each beat has a recognisable shape.</td>
+        <td>Electrodes on the skin of the chest.</td>
+      </tr>
+      <tr>
+        <td><strong>RR intervals</strong></td>
+        <td>The time between one beat and the next, in milliseconds. A resting heart produces a sequence such as 987, 1052, 998, 1021.</td>
+        <td>Computed on the strap from the ECG, then sent over Bluetooth.</td>
+      </tr>
+      <tr>
+        <td><strong>Pulse intervals (PPI)</strong></td>
+        <td>The same idea measured from the pulse wave in the skin instead of the heart's electricity. Slightly softer timing.</td>
+        <td>Optical sensors: arm bands, and the back of most watches. Few expose it over standard Bluetooth.</td>
+      </tr>
+      <tr>
+        <td><strong>Averaged BPM</strong></td>
+        <td>One number, about once a second, usually a whole number, averaged over a window of recent beats.</td>
+        <td>What most watches broadcast over Bluetooth.</td>
+      </tr>
+      <tr>
+        <td><strong>Daily scores</strong></td>
+        <td>HRV status, recovery, readiness. A summary built from overnight data and a personal baseline.</td>
+        <td>The watch's or ring's app, calculated once a day.</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <p>
+    A detail that only matters if you write the software: the standard Bluetooth Heart Rate Profile
+    carries each RR interval as a whole number of 1/1024-second steps, so a strap that supports it
+    reports beat timing in steps of about a millisecond. A BPM-only sensor never sends that field at
+    all. The app receives a single integer and has to work from it.
+  </p>
+
+  <p>
+    The earlier post on <a href="/blog/hrv-what-it-measures.html">what HRV actually measures</a>
+    explains why the daily scores answer a different question from a live session. This post is
+    about the middle three rows, because those are what an app sees during a breathing session.
+  </p>
+
+  <h2 id="purposes">Which kind is good for what</h2>
+
+  <p>
+    None of these is better in general. Each is the right shape for some jobs and the wrong shape
+    for others, and most of the confusion comes from using one for the other's job.
+  </p>
+
+  <div class="tablewrap"><table>
+    <thead>
+      <tr><th>If you want to…</th><th>You need</th><th>Why</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Gauge effort during a run or ride</td>
+        <td>Averaged BPM</td>
+        <td>A steady, readable number is the point. Smoothing helps here.</td>
+      </tr>
+      <tr>
+        <td>Follow resting heart rate or overnight trends</td>
+        <td>Daily scores</td>
+        <td>Built for exactly this, and comfortable to wear all night.</td>
+      </tr>
+      <tr>
+        <td>See your heart rate rise and fall with a slow breath</td>
+        <td>RR intervals, or BPM at slow paces</td>
+        <td>The wave is large when you breathe slowly, so even an averaged signal shows it.</td>
+      </tr>
+      <tr>
+        <td>Compare breathing paces, or find which pace gives the cleanest wave</td>
+        <td>RR intervals for the finest detail; averaged BPM for a good estimate</td>
+        <td>Faster paces make a smaller wave, and averaging flattens small waves first, so differences between paces are easier to see with RR intervals.</td>
+      </tr>
+      <tr>
+        <td>Read an HRV number in milliseconds (RMSSD, SDNN)</td>
+        <td>RR intervals</td>
+        <td>These are statistics on beat-to-beat differences. An averaged signal has no such differences left.</td>
+      </tr>
+      <tr>
+        <td>Check for skipped or extra beats, or validate another sensor</td>
+        <td>ECG</td>
+        <td>Only the waveform shows what each beat looked like.</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="why-averaging">What averaging does to the breathing wave</h2>
+
+  <p>
+    Averaging is a good design choice for a watch. A watch that showed every beat's raw timing would
+    be jumpy and hard to read in the middle of a workout, and a steady number is what you want
+    there. For breathing work it has three predictable effects worth knowing about.
+  </p>
+
+  <ul>
+    <li><strong>It trims fast rhythms more than slow ones.</strong> Any average over a few seconds
+    barely touches a 14-second cycle and removes more of an 8-second one. Whatever filter a
+    particular watch uses, this is how averaging behaves.</li>
+    <li><strong>It runs late.</strong> An average is built from beats that already happened, so the
+    displayed value sits behind the heart.</li>
+    <li><strong>Whole numbers add a staircase.</strong> One bpm is a large step when the wave you want
+    to see is only a few bpm tall.</li>
+  </ul>
+
+  <p>
+    Slow breathing is the friendliest case for an averaged signal, because the wave you're producing
+    is slow and large. The effects grow as the wave gets smaller and faster.
+  </p>
+
+  <h2 id="we-measured">What we measured: a strap and a watch, worn together</h2>
+
+  <p>
+    We wore a Polar H10 and a Garmin Forerunner 165 (with Broadcast Heart Rate on) for a 35-minute
+    session: normal breathing, a full assessment, five minutes near the pace the assessment chose,
+    five minutes at a faster pace, and a few minutes of talking and moving. A Mac recorded both
+    sensors on one clock, along with the H10's raw ECG. The app ran on the strap at the same time.
+  </p>
+
+  <div class="figure">
+    <svg viewBox="0 0 640 270" role="img" style="width:100%;height:auto" aria-label="Two minutes of heart rate while breathing at 4.3 breaths per minute. The chest strap shows a wave of about 15 beats per minute per breath. The watch shows a smaller, stepped wave that arrives several seconds later."><line x1="46" x2="604" y1="222.0" y2="222.0" stroke="var(--border)" stroke-width="1"/><text x="38" y="226.0" text-anchor="end" class="ax">50</text><line x1="46" x2="604" y1="173.5" y2="173.5" stroke="var(--border)" stroke-width="1"/><text x="38" y="177.5" text-anchor="end" class="ax">55</text><line x1="46" x2="604" y1="125.0" y2="125.0" stroke="var(--border)" stroke-width="1"/><text x="38" y="129.0" text-anchor="end" class="ax">60</text><line x1="46" x2="604" y1="76.5" y2="76.5" stroke="var(--border)" stroke-width="1"/><text x="38" y="80.5" text-anchor="end" class="ax">65</text><line x1="46" x2="604" y1="28.0" y2="28.0" stroke="var(--border)" stroke-width="1"/><text x="38" y="32.0" text-anchor="end" class="ax">70</text><text x="46.0" y="240" text-anchor="middle" class="ax">0 s</text><text x="139.0" y="240" text-anchor="middle" class="ax">20 s</text><text x="232.0" y="240" text-anchor="middle" class="ax">40 s</text><text x="325.0" y="240" text-anchor="middle" class="ax">60 s</text><text x="418.0" y="240" text-anchor="middle" class="ax">80 s</text><text x="511.0" y="240" text-anchor="middle" class="ax">100 s</text><text x="604.0" y="240" text-anchor="middle" class="ax">120 s</text><text x="38" y="14" text-anchor="end" class="ax">bpm</text><path d="M47.0 154.1 H53.1 V154.1 H53.1 V154.1 H54.6 V154.1 H56.2 V154.1 H59.3 V154.1 H63.9 V154.1 H63.9 V154.1 H65.4 V154.1 H68.5 V154.1 H70.0 V154.1 H74.6 V144.4 H74.6 V144.4 H79.2 V144.4 H79.2 V144.4 H82.3 V125.0 H86.9 V125.0 H86.9 V125.0 H91.5 V125.0 H91.5 V125.0 H96.1 V125.0 H96.1 V125.0 H102.2 V125.0 H102.2 V134.7 H103.8 V134.7 H105.3 V134.7 H108.4 V134.7 H113.0 V154.1 H113.0 V154.1 H116.0 V154.1 H117.6 V154.1 H119.1 V173.5 H122.2 V173.5 H123.7 V163.8 H126.8 V163.8 H128.3 V163.8 H131.4 V163.8 H132.9 V163.8 H136.0 V163.8 H137.5 V125.0 H140.6 V125.0 H142.1 V125.0 H145.2 V125.0 H148.3 V125.0 H151.3 V125.0 H151.3 V125.0 H157.5 V125.0 H157.5 V134.7 H159.0 V134.7 H162.1 V134.7 H165.1 V134.7 H166.7 V144.4 H168.2 V144.4 H171.3 V144.4 H172.8 V144.4 H177.4 V183.2 H177.4 V183.2 H183.5 V192.9 H183.5 V192.9 H185.1 V192.9 H191.2 V192.9 H191.2 V192.9 H191.2 V192.9 H197.4 V183.2 H197.4 V183.2 H198.9 V183.2 H200.4 V183.2 H206.6 V163.8 H208.1 V163.8 H208.1 V134.7 H215.8 V134.7 H215.8 V134.7 H215.8 V134.7 H220.4 V115.3 H220.4 V115.3 H222.0 V115.3 H225.0 V115.3 H226.6 V115.3 H228.1 V115.3 H234.2 V134.7 H234.2 V134.7 H237.3 V144.4 H238.8 V144.4 H240.3 V144.4 H244.9 V144.4 H244.9 V163.8 H248.0 V163.8 H249.5 V192.9 H255.7 V192.9 H255.7 V192.9 H257.2 V192.9 H261.8 V183.2 H261.8 V183.2 H269.5 V173.5 H269.5 V173.5 H271.0 V173.5 H271.0 V173.5 H272.5 V163.8 H277.2 V163.8 H277.2 V144.4 H283.3 V144.4 H284.9 V144.4 H284.9 V144.4 H289.5 V125.0 H289.5 V125.0 H291.0 V144.4 H303.2 V144.4 H303.2 V144.4 H303.2 V144.4 H303.2 V144.4 H303.2 V144.4 H304.8 V163.8 H314.0 V163.8 H314.0 V163.8 H314.0 V163.8 H315.5 V173.5 H317.0 V173.5 H324.7 V173.5 H324.7 V173.5 H324.7 V173.5 H330.9 V173.5 H330.9 V173.5 H330.9 V173.5 H333.9 V163.8 H338.5 V163.8 H340.1 V163.8 H340.1 V163.8 H343.1 V154.1 H346.2 V154.1 H352.3 V115.3 H352.3 V115.3 H352.3 V115.3 H353.9 V115.3 H364.6 V125.0 H364.6 V125.0 H364.6 V134.7 H369.2 V134.7 H369.2 V134.7 H369.2 V134.7 H370.8 V144.4 H372.3 V144.4 H375.4 V154.1 H376.9 V154.1 H381.5 V154.1 H381.5 V154.1 H389.2 V154.1 H389.2 V154.1 H389.2 V154.1 H399.9 V154.1 H403.0 V154.1 H403.0 V154.1 H403.0 V144.4 H403.0 V144.4 H404.5 V144.4 H409.1 V144.4 H409.1 V125.0 H416.8 V125.0 H416.8 V125.0 H416.8 V125.0 H416.8 V105.6 H419.9 V105.6 H421.4 V105.6 H424.5 V105.6 H427.5 V125.0 H429.1 V125.0 H430.6 V134.7 H433.7 V134.7 H436.7 V144.4 H438.3 V144.4 H439.8 V144.4 H442.9 V144.4 H444.4 V163.8 H447.5 V163.8 H449.0 V163.8 H452.1 V163.8 H453.6 V163.8 H456.7 V163.8 H458.2 V154.1 H461.3 V154.1 H462.8 V144.4 H467.4 V144.4 H469.0 V144.4 H470.5 V144.4 H473.6 V86.2 H479.7 V86.2 H479.7 V86.2 H479.7 V86.2 H485.8 V86.2 H485.9 V86.2 H487.4 V105.6 H490.4 V105.6 H492.0 V115.3 H493.5 V115.3 H496.6 V115.3 H499.7 V115.3 H501.2 V144.4 H502.7 V144.4 H505.8 V144.4 H508.9 V144.4 H510.4 V163.8 H512.0 V163.8 H516.6 V163.8 H516.6 V163.8 H522.7 V154.1 H522.7 V154.1 H524.2 V154.1 H525.7 V154.1 H530.3 V144.4 H530.3 V144.4 H536.5 V144.4 H536.5 V144.4 H539.6 V86.2 H539.6 V86.2 H545.7 V86.2 H545.7 V86.2 H547.2 V86.2 H551.8 V86.2 H551.8 V86.2 H556.4 V86.2 H556.4 V105.6 H559.5 V105.6 H562.6 V105.6 H564.1 V105.6 H565.6 V115.3 H570.3 V115.3 H570.3 V125.0 H573.4 V125.0 H574.9 V144.4 H578.0 V144.4 H579.5 V144.4 H582.6 V144.4 H584.1 V134.7 H587.1 V134.7 H588.7 V134.7 H594.8 V134.7 H594.8 V125.0 H596.3 V125.0 H597.9 V125.0 H600.9 V125.0 H602.5 V115.3" fill="none" stroke="var(--green)" stroke-width="2"/><path d="M48.0 130.8 L52.5 111.4 L56.9 91.1 L61.2 79.4 L65.6 87.2 L70.2 123.1 L75.2 168.7 L80.5 193.9 L85.7 188.1 L91.0 193.9 L96.1 181.3 L101.1 166.7 L105.9 139.6 L110.6 126.9 L115.1 112.4 L119.7 104.6 L124.1 96.9 L128.5 101.7 L133.1 120.2 L138.0 144.4 L143.3 197.8 L148.8 212.3 L154.2 210.4 L159.6 199.7 L164.7 185.1 L169.8 174.5 L174.7 154.1 L179.4 132.8 L184.0 116.3 L188.5 102.7 L192.8 86.2 L197.2 93.0 L201.7 103.7 L206.5 142.5 L211.9 201.6 L217.4 215.2 L222.8 207.4 L228.1 196.8 L233.3 185.1 L238.3 165.7 L243.1 144.4 L247.8 131.8 L252.4 121.1 L256.9 103.7 L261.4 112.4 L266.0 115.3 L270.8 135.7 L276.0 187.1 L281.2 195.8 L286.6 197.8 L291.8 192.9 L297.1 191.9 L302.2 172.5 L307.1 157.0 L311.8 138.6 L316.5 127.9 L321.1 114.3 L325.5 97.8 L330.0 99.8 L334.5 110.5 L339.4 157.0 L344.9 206.5 L350.3 210.4 L355.7 207.4 L361.1 201.6 L366.0 159.9 L370.8 137.6 L375.2 102.7 L379.6 85.2 L383.7 55.2 L387.9 57.1 L392.1 63.9 L396.4 78.4 L400.9 99.8 L405.6 129.8 L410.6 171.6 L415.8 186.1 L421.0 185.1 L426.2 183.2 L431.2 168.7 L436.0 142.5 L440.6 117.2 L445.0 91.1 L449.2 69.7 L453.4 59.0 L457.6 56.1 L461.8 73.6 L466.4 114.3 L471.4 162.8 L476.6 193.9 L481.8 188.1 L487.0 181.3 L492.0 162.8 L496.8 145.4 L501.4 121.1 L506.0 109.5 L510.4 95.9 L514.7 82.3 L518.9 63.9 L523.1 61.9 L527.4 77.5 L531.9 107.5 L536.8 149.2 L541.9 177.4 L546.9 169.6 L551.9 159.9 L556.7 147.3 L561.5 134.7 L566.1 120.2 L570.6 107.5 L575.1 104.6 L579.5 93.0 L583.8 77.5 L588.0 59.0 L592.1 63.9 L596.6 92.0 L601.3 136.6" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/><line x1="46" x2="68" y1="252" y2="252" stroke="var(--accent)" stroke-width="2"/><text x="74" y="256" class="ax">Polar H10 chest strap, every beat</text><line x1="338" x2="360" y1="252" y2="252" stroke="var(--green)" stroke-width="2"/><text x="366" y="256" class="ax">Garmin Forerunner, broadcast bpm</text></svg>
+    <p class="figcaption">Two minutes at 4.3 breaths per minute, from the recording. Each breath is one rise and fall. The strap's wave is taller and sharper; the watch's is smaller, stepped, and arrives a few seconds later, which is what averaging does.</p>
+  </div>
+
+  <p><strong>The strap held up against its own ECG.</strong> Over 1,959 heartbeats, the intervals the
+  H10 reported differed from intervals measured on its own ECG by a median of 2.4 ms. That is why
+  we treated it as the reference for everything else.</p>
+
+  <p><strong>The watch followed the same rhythm.</strong> It's a smaller copy, as expected from an
+  averaged signal. Here is how much of the strap's breathing wave the watch trace contained at each pace:</p>
+
+  <div class="tablewrap"><table>
+    <thead>
+      <tr><th>Breathing pace</th><th>Watch wave as a share of the strap's</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>4.0–4.5 breaths/min</td><td>about 43%</td></tr>
+      <tr><td>4.5–5.0</td><td>about 30%</td></tr>
+      <tr><td>5.0–5.5</td><td>about 20%</td></tr>
+      <tr><td>5.5–6.5</td><td>about 15–17%</td></tr>
+      <tr><td>6.5 and faster</td><td>about 12–15%</td></tr>
+    </tbody>
+  </table></div>
+
+  <p>
+    That matches the three effects above: the slower the breath, the more of the wave comes through.
+    The watch's reading also arrives about 7 seconds after the strap's, which is normal for an
+    averaged value (the strap itself reports each beat about 2 seconds after it happens, which we
+    confirmed against the ECG). Delay doesn't change the shape of the wave, but it is worth knowing
+    about when you compare the live graph to the pacer.
+  </p>
+
+  <p><strong>The watch gave a good estimate where it counts.</strong> It scored the slower hold
+  higher than the faster one, as the strap did. And when we took the assessment the app ran on the
+  strap and re-scored the same six paces from the watch's data, it picked the same winner,
+  4.0 breaths per minute. Both sources dipped at 5.5 and peaked at 4.0.</p>
+
+  <div class="callout">
+    <span class="callout-label">What this means for the assessment</span>
+    <p>A watch gives a decent estimate of your pace. The strap scored the six paces between 0.73
+    and 0.85, with 4.0 on top. The watch scored them from 0.23 to 0.72, with the same pace on top
+    and a wider spread, since averaging lowers every score somewhat. One thing we haven't tested:
+    4.0 was the slowest pace in the assessment, where a watch's signal is strongest. We haven't yet
+    recorded someone whose best pace is near 6, so for a result you want to be sure of, a strap
+    is a good way to confirm it.</p>
+  </div>
+
+  <p><strong>Millisecond HRV is where a strap adds the most.</strong> RMSSD over the same session was
+  about 32 ms from the strap and about 10 ms from the watch's broadcast, because averaging removes
+  most of the beat-to-beat differences that RMSSD is made of. A watch is fine for the live wave;
+  for an RMSSD number in milliseconds, use a strap.</p>
+
+  <p style="color:var(--muted); font-size:0.88rem;">
+    Limits: this is one person, one sitting, and one watch model. Other watches smooth differently,
+    and a watch's own app may have access to more than its Bluetooth broadcast does. Treat the
+    numbers as a measured example, not a rating of any brand.
+  </p>
+
+  <h2 id="recommendation">Our recommendation: a Polar H10</h2>
+
+  <div class="callout">
+    <span class="callout-label">Disclosure</span>
+    <p>We are not affiliated with Polar, Garmin, Wahoo, Apple or any other sensor brand, and we
+    receive no sponsorship, payment, free products or commission from any of them. This page has
+    no affiliate links. The strap and watch we tested are our own, and the recommendation is based
+    on what we measured.</p>
+  </div>
+
+  <p>
+    For the most detailed picture, finding your resonance pace and watching the wave closely, we'd
+    pick a Polar H10 chest strap. The reasons come straight from the sections above.
+  </p>
+
+  <ul>
+    <li><strong>It sends real RR intervals.</strong> Every number the app computes, from the wave
+    on the live graph to RMSSD, comes from actual beat timing, not a reconstruction.</li>
+    <li><strong>Its timing is verified.</strong> Our own comparison with its ECG found a median gap of 2.4 ms,
+    and published validation studies against clinical ECG reach the same conclusion.</li>
+    <li><strong>It needs no setup.</strong> It uses the standard Bluetooth Heart Rate Profile and starts
+    broadcasting when worn. There is no menu toggle, no bridge app and no foreground app to keep open.</li>
+    <li><strong>It accepts two Bluetooth connections at once,</strong> so it can feed this app and
+    another device together. We used that for the recording above.</li>
+  </ul>
+
+  <p>
+    The cost is that you wear a strap: moisten the electrodes, put it on a minute or two before you
+    start so the signal settles, and keep it somewhere that dries. Other dedicated chest straps that
+    report RR intervals, such as the Garmin HRM-Pro or HRM-Dual and the Wahoo TICKR, serve the same
+    purpose. The <a href="/blog/connecting-heart-rate-devices.html">device guide</a> lists them
+    and how to pair each one.
+  </p>
+
+  <h3>And if you have a watch</h3>
+
+  <p>
+    A watch works well with the app. It's already on your wrist, it needs no new purchase, and slow
+    breathing produces a wave large enough for it to show clearly. Use it for the assessment, for
+    practice sessions, and for the all-day and overnight tracking that straps aren't meant for. The
+    assessment gives you a decent estimate of your pace. A strap is the upgrade for finer detail:
+    telling close paces apart, confirming your result, and reading HRV in milliseconds. You don't
+    have to choose one for good. Many people keep both.
+  </p>
+
+  <div class="callout">
+    <span class="callout-label">In the app</span>
+    <p>The app uses real RR intervals whenever the sensor sends them and falls back to the BPM
+    stream when it doesn't. The assessment works with either; its intro page mentions that a chest
+    strap gives the most accurate result.</p>
+  </div>
+
+  <h2>Further reading</h2>
+
+  <ul>
+    <li><a href="/blog/connecting-heart-rate-devices.html">How to connect your heart rate monitor</a> — pairing every device type</li>
+    <li><a href="/blog/hrv-what-it-measures.html">What HRV actually measures</a> — the metrics, and what daily scores are</li>
+    <li><a href="/blog/personal-resonance-frequency.html">Why there's no universal 6 breaths per minute</a> — what the assessment is looking for</li>
+    <li><a href="/glossary.html">The glossary</a> — RR interval, RMSSD, PPG and the rest</li>
+  </ul>
+
+  <p class="mt-xl">
+    <a href="/blog/" class="btn-secondary">← All posts</a>
+    <a href="/blog/connecting-heart-rate-devices.html" class="btn-secondary" style="margin-left: 8px;">Next: Connect your device →</a>
+  </p>
+
+</article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-title">Learn</div>
+      <a href="/science.html">The Science</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/research.html">Research</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Tools</div>
+      <a href="/pacer.html">Breath Pacer</a>
+      <a href="/calculator.html">RF Calculator</a>
+      <a href="/compare.html">Compare Apps</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Resonance: HRV Biofeedback</div>
+      <a href="/how-it-works.html">How It Works</a>
+      <a href="/blog/connecting-heart-rate-devices.html">Connect a Device</a>
+      <a href="/for-coaches.html">For Coaches</a>
+      <a href="mailto:support@heartresonance.app">Contact</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Download</div>
+      <a href="https://apps.apple.com/us/app/resonance-hrv-biofeedback/id6812053481" target="_blank" rel="noopener">iPhone · App Store ↗</a>
+      <a href="https://play.google.com/store/apps/details?id=com.heartresonance.app&amp;referrer=utm_source%3Dheartresonance.app%26utm_medium%3Dreferral%26utm_campaign%3Dblog-heart-rate-sensors-explained" target="_blank" rel="noopener">Android · Google Play ↗</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Legal</div>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Groma Apps · heartresonance.app
+  </div>
+</footer>
+
+</body>
+</html>
