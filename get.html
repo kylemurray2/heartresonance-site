@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://heartresonance.app/get.html" />
+  <title>Get the App — Resonance: HRV Biofeedback</title>
+  <meta name="description" content="Download Resonance: HRV Biofeedback for iPhone or Android." />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script>
+    // Short link for social bios: /get?src=tiktok sends iPhones to the App Store and Android
+    // to Google Play with the source carried in the Play install referrer.
+    (function () {
+      var APP_STORE = "https://apps.apple.com/us/app/resonance-hrv-biofeedback/id6812053481";
+      var PLAY = "https://play.google.com/store/apps/details?id=com.heartresonance.app";
+      var q = new URLSearchParams(location.search);
+      var clean = function (v) { return v && /^[a-z0-9_.-]{1,40}$/i.test(v) ? v.toLowerCase() : null; };
+      var src = clean(q.get("src"));
+      var ref = "utm_source=" + (src || "heartresonance.app") +
+        "&utm_medium=" + (clean(q.get("m")) || (src ? "social" : "referral")) +
+        "&utm_campaign=" + (clean(q.get("c")) || (src ? "profile" : "get"));
+      var play = PLAY + "&referrer=" + encodeURIComponent(ref);
+      window.__storeLinks = { apple: APP_STORE, play: play };
+
+      var ua = navigator.userAgent || "";
+      var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      if (ios) location.replace(APP_STORE);
+      else if (/Android/.test(ua)) location.replace(play);
+    })();
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark">♥</span>
+      <span class="brand-name">Resonance: HRV Biofeedback</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<article class="prose">
+  <div class="kicker">Download</div>
+  <h1>Get Resonance: HRV Biofeedback</h1>
+  <p>Opening your app store… If nothing happens, pick your phone below.</p>
+  <div class="store-buttons" style="margin-top: 28px;">
+    <a id="apple" href="https://apps.apple.com/us/app/resonance-hrv-biofeedback/id6812053481" class="store-btn store-primary">
+      <span class="store-small">Download on the</span><span class="store-name">App Store</span>
+    </a>
+    <a id="play" href="https://play.google.com/store/apps/details?id=com.heartresonance.app&amp;referrer=utm_source%3Dheartresonance.app%26utm_medium%3Dreferral%26utm_campaign%3Dget" class="store-btn">
+      <span class="store-small">Get it on</span><span class="store-name">Google Play</span>
+    </a>
+  </div>
+  <p style="margin-top: 28px;"><a href="/">Learn more about the app →</a></p>
+</article>
+
+</main>
+
+<script>
+  if (window.__storeLinks) document.getElementById("play").href = window.__storeLinks.play;
+</script>
+
+</body>
+</html>
