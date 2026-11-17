@@ -61,6 +61,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://heartresonance.app/blog/connecting-heart-rate-devices.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://heartresonance.app/blog/vagus-nerve-stimulation-breathing.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://heartresonance.app/blog/now-on-the-app-store.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>

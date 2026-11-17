@@ -1214,3 +1214,13 @@ details[open] .faq-question::after { content: "−"; }
   .nav-cta-group { gap: 6px; }
   .nav-cta-group .nav-cta { padding: 5px 9px; font-size: 0.78rem; }
 }
+
+/* Reviews */
+.rating-stars { font-size: 1.4rem; letter-spacing: 4px; margin-bottom: 4px; }
+.review-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.review-stars { color: var(--accent-2); letter-spacing: 2px; font-size: 1rem; }
+.review-card { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.review-card blockquote { margin: 0; padding: 0; border: none; color: var(--text-2); font-size: 0.95rem; line-height: 1.6; font-style: normal; }
+.review-card figcaption { margin-top: auto; color: var(--muted); font-size: 0.82rem; }
+.review-card figcaption span { font-style: italic; }
+.review-more { text-align: center; margin-top: 24px; }
